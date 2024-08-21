@@ -1,44 +1,30 @@
-# Introdução
+## Introdução
 
-Texto descritivo introdutório apresentando a visão geral do projeto a ser desenvolvido considerando o contexto em que ele se insere, os objetivos gerais, a justificativa e o público-alvo do projeto.
+ O mundo do cinema esta em constante mudança, com produções crescentes e cada vez mais diversificadas. Uma grande vantagem é entender como o público pode reagir a um filme antes de seu lançamento. Este projeto se propõe a desenvolver um modelo que ajude a prever a nota média de um filme no IMDb, uma das principais plataformas de avaliação cinematográfica.
+ O IMDb oferece uma enorme quantidade de informações sobre filmes – desde o gênero e o elenco até a sinopse e o ano de lançamento, além das avaliações dos espectadores. Ao explorar esses dados, nosso objetivo é identificar quais características têm mais influência na nota final que um filme recebe.
+ Produtoras podem usar essas previsões para escolher temas e gêneros com maior potencial de sucesso, planejar orçamentos e alocar recursos de forma mais eficiente, e dessa forma contribuir para que filmes tenham um impacto mais significativo e consequentemente mais lucrativo no mercado.
 
 ## Problema
 
-Nesta seção, você deve apresentar o problema que a sua investigação/experimentação busca resolver. Por exemplo, caso o _dataset_ selecionado, seja um _dataset_ que contenha uma série temporal com o preço de diversas ações da bolsa de valores, o problema pode estar relacionado a dificuldade em saber a melhor hora (hora certa??) de comprar ou então, de executar a venda de uma determinada ação.
-
-Descreva ainda o contexto em que essa aplicação será usada, se houver: empresa parceira, tecnologias etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+ O problema que este projeto busca resolver é a dificuldade em identificar quais características dos filmes têm o maior impacto na nota média que eles recebem. A variedade nas avaliações dos filmes torna difícil para as produtoras prever com precisão como um filme será avaliado pelos espectadores. Isso pode resultar em decisões menos informadas sobre quais filmes têm maior potencial de sucesso e como alocar recursos e esforços de marketing de forma eficaz.
 
 ## Questão de pesquisa
 
-A questão de pesquisa é a base de todo o trabalho que será desenvolvido. É ela que motiva a realização da pesquisa e deverá ser adequada ao problema identificado. Ao término de sua pesquisa/experimentação, o objetivo é que seja encontrada a resposta da questão de pesquisa previamente definida.
-
-> **Links Úteis**:
-> - [Questão de pesquisa](https://www.enago.com.br/academy/how-to-develop-good-research-question-types-examples/)
-> - [Problema de pesquisa](https://blog.even3.com.br/problema-de-pesquisa/)
+ Quais características de um filme são relevantes para determinar a nota média do filme no IMDB?
 
 ## Objetivos preliminares
 
-Aqui você deve descrever os objetivos preliminares do trabalho indicando que o objetivo geral é experimentar modelos de aprendizado de máquina adequados para solucionar o problema apresentado acima. 
+ Experimentar modelos de aprendizado de máquina adequados capazes de prever a nota média de um filme no IMDb com base em um conjunto de características extraídas do dataset. Utilizando o dataset do IMDb como base, este projeto buscará responder quais características dos filmes (gênero, elenco, sinopse, etc.) têm maior impacto na nota final.
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
-
-Por exemplo: um objetivo específico pode estar relacionado a predizer a tendência de alta, estabilidade ou queda de uma determinada ação em uma determinada janela do tempo ou então, predizer o valor exato de uma determinada ação.
-Lembre-se que, à medida que a pesquisa/experimentação evolui, os objetivos podem evoluir também, portanto, não se esqueça de fazer as atualizações necessárias.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+#### Analisar a Relevância das Características dos Filmes: 
+Explorar o impacto das características dos filmes na nota média, utilizando técnicas estatísticas e de visualização.
+#### Desenvolver e Validar Modelos Preditivos: 
+Criar e testar modelos de aprendizado de máquina para prever a nota média dos filmes, avaliando sua precisão e escolhendo o melhor modelo.
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com o conjunto de dados escolhido. Indique as razões pelas quais você escolheu seus objetivos específicos, as razões para aprofundar o estudo do problema identificado e qual o impacto que tal problema provoca na sociedade. Lembre-se de quantificar (com dados reais e suas respectivas fontes) este impacto.
-
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+A indústria cinematográfica movimenta bilhões de dólares anualmente e exerce uma influência significativa na cultura popular. A capacidade de prever o sucesso de um filme antes de seu lançamento pode trazer diversos benefícios para a indústria.
+O dataset do IMDb oferece uma rica fonte de dados sobre filmes, permitindo analisar um vasto conjunto de características e identificar padrões que podem influenciar a percepção do público. Considerando a bilheteria global de 2023, Gower Street Analytics estima que a arrecadação total do último ano foi US$ 33,9 bilhões, a otimização das decisões de investimento com base em dados pode gerar um impacto econômico significativo. 
 
 ## Público-Alvo
 
@@ -54,6 +40,19 @@ Adicione informações sobre o público-alvo por meio de uma descrição textual
 
 ## Estado da arte
 
+[Predicting IMDb Rating of Movies by Machine Learning Techniques]([https://dl.acm.org/](https://ieeexplore.ieee.org/abstract/document/8944604))
+
+[Movie Success Prediction using Machine Learning Algorithms and their Comparison](https://ieeexplore.ieee.org/abstract/document/8703320)
+
+[Movie success prediction using data mining](https://ieeexplore.ieee.org/abstract/document/8204173)
+
+[A Data Mining Approach To Analysis And Prediction Of Movie Ratings](https://www.witpress.com/elibrary/wit-transactions-on-information-and-communication-technologies/33/14248)
+
+[Prediction of Movies popularity Using Machine Learning Techniques](https://www.researchgate.net/profile/Hammad-Afzal/publication/311913687_Prediction_of_Movies_popularity_Using_Machine_Learning_Techniques/links/586253ce08ae6eb871ab0748/Prediction-of-Movies-popularity-Using-Machine-Learning-Techniques.pdf)
+
+
+
+
 Nesta seção, deverão ser descritas outras abordagens identificadas na literatura que foram utilizadas para resolver problemas similares ao problema em questão. Para isso, faça uma pesquisa detalhada e identifique, no mínimo, 5 trabalhos que tenham utilizado dados em contexto similares e então: (a) detalhe e contextualize o problema, (b) descreva as principais características do _dataset_ utilizado, (c) detalhe quais abordagens/algoritmos foram utilizados (e seus parâmetros), (d) identifique as métricas de avaliação empregadas, e (e) fale sobre os resultados obtidos. 
 
 > **Links Úteis**:
@@ -63,6 +62,9 @@ Nesta seção, deverão ser descritas outras abordagens identificadas na literat
 > - [ACM Digital Library](https://dl.acm.org/)
 
 # Descrição do _dataset_ selecionado
+
+[IMDB Dataset](https://www.kaggle.com/datasets/payamamanat/imbd-dataset/data)
+
 
 Nesta seção, você deverá descrever detalhadamente o _dataset_ selecionado. Lembre-se de informar o link de acesso a ele, bem como, de descrever cada um dos seus atributos (a que se refere, tipo do atributo etc.), se existem atributos faltantes etc.
 
@@ -74,8 +76,5 @@ Nesta seção, você deverá estruturar o seu Canvas Analítico. O Canvas Analí
 > - [Modelo do Canvas Analítico](https://github.com/ICEI-PUC-Minas-PMV-SI/PesquisaExperimentacao-Template/blob/main/help/Software-Analtics-Canvas-v1.0.pdf)
 
 # Referências
+[Bilheteria](https://www.cnnbrasil.com.br/entretenimento/cinema-bilheteria-global-de-2023-foi-305-maior-que-a-de-2022/#:~:text=A%20ind%C3%BAstria%20cinematogr%C3%A1fica%20est%C3%A1%20em,dados%20da%20Gower%20Street%20Analytics)
 
-Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho utilizando o padrão ABNT.
-
-> **Links Úteis**:
-> - [Padrão ABNT PUC Minas](https://portal.pucminas.br/biblioteca/index_padrao.php?pagina=5886)
