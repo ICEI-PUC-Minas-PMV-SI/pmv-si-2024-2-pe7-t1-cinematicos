@@ -1,9 +1,7 @@
 ## Introdução
 
- O cinema é uma das formas de entretenimento mais influentes e lucrativas do mundo moderno, com uma indústria global que produz milhares de filmes anualmente. No entanto, a previsão do sucesso de um filme ainda é uma tarefa complexa e incerta. Com a imensa variedade de produções e a volatilidade das respostas do público, prever como um filme será avaliado antes de seu lançamento representa um desafio significativo para os produtores e investidores.
-Este projeto propõe a utilização de técnicas de aprendizado de máquina para estimar com precisão a nota média de um filme no IMDb, uma das plataformas de avaliação cinematográfica mais influentes e abrangentes globalmente. O IMDb não só oferece informações detalhadas sobre filmes, como gênero, elenco e sinopse, mas também fornece avaliações dos espectadores, que desempenham um papel fundamental na recepção de um filme.
-Ao analisar uma ampla gama de dados disponíveis sobre filmes, nosso objetivo é identificar quais características são mais indicativas das avaliações finais recebidas. Com a aplicação de técnicas de aprendizado de máquina, buscamos desenvolver um modelo preditivo que possa oferecer previsões mais precisas das notas médias dos filmes.
-A capacidade de prever essas avaliações pode fornecer uma vantagem competitiva significativa para as produtoras, permitindo-lhes tomar decisões mais assertivas sobre temas, gêneros e alocação de recursos. Além disso, este modelo pode auxiliar na estratégia de marketing e no planejamento financeiro, contribuindo para um mercado cinematográfico mais estratégico e eficiente. Ao integrar inteligência de dados ao processo de produção e promoção de filmes, esperamos não apenas melhorar o processo decisório, mas também maximizar o impacto e a rentabilidade das produções no competitivo cenário atual.
+ O cinema é uma das formas de entretenimento mais influentes e lucrativas do mundo moderno, com a indústria global produzindo milhares de filmes anualmente. No entanto, prever o sucesso de um filme é um desafio complexo devido à diversidade de produções e à imprevisibilidade das reações do público. Essa incerteza representa um risco significativo para produtores e investidores, que buscam maneiras eficazes de avaliar o potencial de sucesso de um filme antes de seu lançamento.
+Este projeto propõe a utilização de técnicas de aprendizado de máquina para estimar com boa precisão a nota média de filmes no IMDb, uma das principais plataformas de avaliação cinematográfica mundial. O IMDb fornece uma variedade de informações sobre filmes, incluindo gênero, elenco e sinopse, bem como avaliações dos espectadores, que são fundamentais para a aceitação crítica e popular. Ao analisar esses dados, o projeto visa identificar quais características dos filmes são mais indicativas das avaliações finais. Desenvolvendo modelos preditivos, o objetivo é oferecer aos produtores e investidores uma ferramenta para tomar decisões mais informadas sobre quais projetos têm maior potencial de sucesso. Essa capacidade de previsão não apenas melhora a alocação de recursos e a estratégia de marketing, mas também contribui para um mercado cinematográfico mais estratégico e eficiente. Integrando inteligência de dados no processo de produção e promoção, esperamos otimizar o desenvolvimento de filmes e maximizar seu impacto e rentabilidade no competitivo cenário atual.
 
 ## Problema
 
@@ -11,16 +9,20 @@ A capacidade de prever essas avaliações pode fornecer uma vantagem competitiva
  
 ## Questão de pesquisa
 
- Como as características gênero, elenco, sinopse, ano de lançamento e as avaliações dos espectadores dos filmes podem ser usadas para prever com precisão a nota média no IMDb utilizando técnicas de aprendizado de máquina?
+ É possível que as características gênero, elenco, sinopse, ano de lançamento e as avaliações dos espectadores dos filmes sejam usadas para prever com uma boa precisão a nota média no IMDb utilizando técnicas de aprendizado de máquina?
 
 ## Objetivos preliminares
 
- Experimentar modelos de aprendizado de máquina adequados capazes de prever a nota média de um filme no IMDb com base em um conjunto de características extraídas do dataset. Utilizando o dataset do IMDb como base, este projeto buscará responder quais características dos filmes (gênero, elenco, sinopse, etc.) têm maior impacto na nota final.
+Experimentar modelos de aprendizado de máquina adequados capazes de prever a nota média de um filme no IMDb com base em um conjunto de características extraídas do dataset. 
 
-#### Analisar a Relevância das Características dos Filmes: 
-Explorar o impacto das características dos filmes na nota média, utilizando técnicas estatísticas e de visualização.
-#### Desenvolver e Validar Modelos Preditivos: 
-Criar e testar modelos de aprendizado de máquina para prever a nota média dos filmes, avaliando sua precisão e escolhendo o melhor modelo.
+
+#### Antecipar o Sucesso dos Filmes: 
+
+Facilitar decisões estratégicas tornando a tomada de decisão mais informada sobre quais filmes têm maior potencial de sucesso .
+
+#### Identificar Características que Maximizam a Nota Média dos Filmes
+
+Otimizar o desenvolvimento de filmes identificando quais elementos são mais valorizados pelo público melhorando assim a qualidade e o apelo dos filmes produzidos
 
 ## Justificativa
 
