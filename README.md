@@ -6,20 +6,19 @@
 
 `SEMESTRE: 7º`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+Este projeto utiliza técnicas de aprendizado de máquina para prever a nota média de filmes no IMDb, com base em características como gênero, elenco e sinopse. O objetivo é oferecer previsões com boa precisão sobre o sucesso dos filmes, ajudando produtores e investidores a tomar decisões mais informadas e estratégicas sobre produção, marketing e alocação de recursos. Ao integrar análises preditivas, o projeto visa otimizar o desenvolvimento e promover a rentabilidade no mercado cinematográfico.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
-* Nome completo do aluno 6
+Amanda Christine do Carmo Linhares 
+Luiz Henrique Rubioli Costa 
+Frederico Schirmer Marçal 
+Rômulo Gonçalves Medeiros
+Joice de Melo Silva
 
 ## Orientador
 
-* Nome completo do professor 1
+Luciana de Nardin
 
 # Planejamento
 
