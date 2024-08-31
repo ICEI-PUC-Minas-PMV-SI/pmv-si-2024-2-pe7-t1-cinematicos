@@ -10,11 +10,11 @@ Este projeto utiliza técnicas de aprendizado de máquina para prever a nota mé
 
 ## Integrantes
 
-Amanda Christine do Carmo Linhares 
-Luiz Henrique Rubioli Costa 
-Frederico Schirmer Marçal 
-Rômulo Gonçalves Medeiros
-Joice de Melo Silva
+* Amanda Christine do Carmo Linhares 
+* Luiz Henrique Rubioli Costa 
+* Frederico Schirmer Marçal 
+* Rômulo Gonçalves Medeiros
+* Joice de Melo Silva
 
 ## Orientador
 
