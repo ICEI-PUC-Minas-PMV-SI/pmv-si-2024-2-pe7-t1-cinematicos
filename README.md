@@ -1,4 +1,4 @@
-# TÍTULO DO PROJETO
+# Cinematicos
 
 `CURSO: Sistemas de Informação`
 
