@@ -145,7 +145,7 @@ Além das abordagens de aprendizado de máquina, a mineração de dados tem cont
 
 Saraee, White e Eccleston (2018) exploraram a análise de características dos filmes usando algoritmos de clustering e análise de componentes principais (PCA). O estudo revelou que o gênero e o envolvimento de atores famosos têm um impacto significativo nas avaliações dos filmes, reforçando a ideia de que características específicas estão fortemente associadas às notas atribuídas pelos usuários.
 
-Em síntese, a combinação de técnicas avançadas de aprendizado de máquina e mineração de dados tem demonstrado um potencial significativo para prever com precisão o sucesso e as avaliações dos filmes. A integração de métodos como redes neurais, Random Forest e técnicas de clustering permite uma compreensão mais aprofundada dos fatores que influenciam a recepção crítica e a popularidade dos filmes. Estes avanços oferecem insights valiosos para este trabalho, que pode se valer de indicadores de algoritmos melhor sucedidos para limitar o escopo da presente pesquisa.
+Em síntese, a experimentação de técnicas avançadas de aprendizado de máquina e mineração de dados tem revelado o potencial de cada método para prever com precisão o sucesso e as avaliações dos filmes. A integração de métodos também pode ser uma solução para compreensão mais aprofundada dos fatores que influenciam a recepção crítica e a popularidade dos filmes. Os avanços observados na análise do estado da arte oferecem insights valiosos para este trabalho, que pode se valer de indicadores de algoritmos melhor sucedidos para limitar o escopo de experimentação da presente pesquisa, permitindo resultados potencialmente mais assertivos.
 
 # Descrição do _dataset_ selecionado
 
