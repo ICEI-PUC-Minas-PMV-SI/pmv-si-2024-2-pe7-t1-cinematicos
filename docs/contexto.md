@@ -135,22 +135,17 @@ Um exemplo recente que ilustra a importância da análise preditiva é o filme "
 
 A previsão do sucesso de filmes e das avaliações que estes recebem é um campo crescente de interesse que se beneficia cada vez mais das técnicas de aprendizado de máquina e mineração de dados. Este campo busca entender e prever como características específicas dos filmes influenciam sua recepção crítica e popularidade, utilizando métodos estatísticos e algoritmos complexos para analisar grandes volumes de dados.
 
-Diversos estudos têm explorado como diferentes métodos podem prever com precisão a popularidade e a recepção crítica de filmes, revelando uma variedade de abordagens e descobertas. A aplicação de técnicas de aprendizado de máquina, por exemplo, tem mostrado resultados promissores na previsão das avaliações de filmes. Pang, Schoenfeld e Cottam (2019) aplicaram algoritmos como redes neurais artificiais e máquinas de vetores de suporte (SVM) para prever as notas dos filmes no IMDb. Os resultados mostraram que as redes neurais artificiais oferecem a melhor precisão, seguidas por SVM e regressão linear, evidenciando como a análise de características detalhadas dos filmes, como gênero e elenco, pode melhorar a precisão das previsões.
+Diversos estudos têm explorado como diferentes métodos podem prever com precisão a popularidade e a recepção crítica de filmes, revelando uma variedade de abordagens e descobertas. A aplicação de técnicas de aprendizado de máquina, por exemplo, tem mostrado resultados promissores na previsão das avaliações de filmes. Bristi, Zaman e Sultana (2019) aplicaram algoritmos como redes neurais artificiais e máquinas de vetores de suporte (SVM) para prever as notas dos filmes no IMDb. Os resultados mostraram que as redes neurais artificiais oferecem a melhor precisão, seguidas por SVM e regressão linear, evidenciando como a análise de características detalhadas dos filmes, como gênero e elenco, pode melhorar a precisão das previsões.
 
-Comparações de diferentes métodos também têm sido uma área de foco significativo. Iyer e Ranganathan (2019) analisaram diversos algoritmos de aprendizado de máquina, incluindo árvores de decisão, k-vizinhos mais próximos (k-NN) e métodos ensemble como Random Forest, para prever o sucesso de filmes, medido através de receitas e críticas. Este estudo destacou que métodos ensemble, como Random Forest, superam métodos individuais, demonstrando a eficácia desses métodos em capturar a complexidade dos dados relacionados ao sucesso dos filmes.
+Comparações de diferentes métodos também têm sido uma área de foco significativo. Dhir e Raj (2018) realizaram seus estudos sobre dados do IMDb, analisando diversos algoritmos de aprendizado de máquina, incluindo árvores de decisão, k-vizinhos mais próximos (k-NN) e métodos ensemble como Random Forest, para prever o sucesso de filmes, medido através de receitas e críticas. Este estudo destacou que métodos ensemble, como Random Forest, superam métodos individuais, demonstrando a eficácia desses métodos em capturar a complexidade dos dados relacionados ao sucesso dos filmes.  Os autores se propuseram a prever o quão bem-sucedido um filme seria em sua pontuação no IMDb antes de sua chegada às bilheterias. Na análise exploratória, foi apontado que o número de usuários votantes, o número de críticos para avaliações, o número de curtidas no Facebook, a duração do filme e a coleção bruta de filmes afetam a pontuação do IMDb fortemente. Filmes de drama e biográficos foram os melhores pontuados entre os gêneros.
 
-Além das abordagens de aprendizado de máquina, a mineração de dados tem contribuído significativamente para a compreensão do sucesso dos filmes. Yang, Hong e Ma (2017) aplicaram técnicas de mineração de dados, como clustering e regras de associação, para identificar padrões que precedem o sucesso dos filmes. A descoberta de que grandes orçamentos e elencos renomados estão correlacionados com maior sucesso sublinha a importância desses fatores na construção de modelos preditivos.
+A previsão da popularidade dos filmes foi investigada por Afzal e Latif (2016), que utilizaram técnicas de aprendizado de máquina, incluindo regressão logística e redes neurais profundas. A pesquisa mostrou que a combinação de características como gênero, marketing e elenco é crucial para prever a popularidade, com redes neurais profundas demonstrando a maior precisão. O trabalho foi realizado sobre um dataset que considera filmes lançados no período compreendido entre e 2004 e 2014. Os dados foram extraídos pelos autores diretamente do IMDB. O estudo avaliou os seguintes classifiers: Logistic Regression, Simple Logistic, Multilayer Perceptron, J48, Naive Bayes e PART. Como resultado, a mais alta precisão foi alcançada com logística simples e regressão logística, 84,34% e 84,15% respectivamente, seguidos dos resultados da árvore de decisão j48, com 82,42%.
 
-Kumar, Singh e Kumar (2018) exploraram a análise de características dos filmes usando algoritmos de clustering e análise de componentes principais (PCA). O estudo revelou que o gênero e o envolvimento de atores famosos têm um impacto significativo nas avaliações dos filmes, reforçando a ideia de que características específicas estão fortemente associadas às notas atribuídas pelos usuários.
+Além das abordagens de aprendizado de máquina, a mineração de dados tem contribuído significativamente para a compreensão do sucesso dos filmes. Javaria, Prakash, Amr e Buckles (2017) aplicaram técnicas de mineração de dados, como clustering e regras de associação, para identificar padrões que precedem o sucesso dos filmes. A descoberta de que grandes orçamentos e elencos renomados estão correlacionados com maior sucesso sublinha a importância desses fatores na construção de modelos preditivos.
 
-A previsão da popularidade dos filmes, por outro lado, foi investigada por Afzal, Ali e Mukhtar (2016), que utilizaram técnicas de aprendizado de máquina, incluindo regressão logística e redes neurais profundas. A pesquisa mostrou que a combinação de características como gênero, marketing e elenco é crucial para prever a popularidade, com redes neurais profundas demonstrando a maior precisão.
+Saraee, White e Eccleston (2018) exploraram a análise de características dos filmes usando algoritmos de clustering e análise de componentes principais (PCA). O estudo revelou que o gênero e o envolvimento de atores famosos têm um impacto significativo nas avaliações dos filmes, reforçando a ideia de que características específicas estão fortemente associadas às notas atribuídas pelos usuários.
 
-Em Latif e  Afzal(2016), o trabalho foi realizado sobre um dataset que considera filmes lançados no período compreendido entre e 2004 e 2014. Os dados foram extraídos pelos autores diretamente do IMDB. O estudo avaliou os seguintes classifiers: Logistic Regression, Simple Logistic, Multilayer Perceptron, J48, Naive Bayes e PART. Como resultado, a mais alta precisão foi alcançada com logística simples e regressão logística, 84,34% e 84,15% respectivamente, seguidos dos resultados da árvore de decisão j48, com 82,42%.
-
-Dhir e Raj(2018) também realizaram seus estudos sobre dados do IMDb. Os autores se propuseram a prever o quão bem-sucedido um filme seria em sua pontuação no IMDb antes de sua chegada às bilheterias. Foram usados diferentes algoritmos no trabalho de pesquisa para análise, mas entre todos a floresta aleatória deu a melhor precisão de previsão Na análise exploratória, foi apontado que o número de usuários votantes, o número de críticos para avaliações, o número de curtidas no Facebook, a duração do filme e a coleção bruta de filmes afetam a pontuação do IMDb fortemente. Filmes de drama e biográficos foram os melhores pontuados entre os gêneros.
-
-
-Em síntese, a combinação de técnicas avançadas de aprendizado de máquina e mineração de dados tem demonstrado um potencial significativo para prever com precisão o sucesso e as avaliações dos filmes. A integração de métodos como redes neurais, Random Forest e técnicas de clustering permite uma compreensão mais aprofundada dos fatores que influenciam a recepção crítica e a popularidade dos filmes. Estes avanços oferecem insights valiosos para a indústria cinematográfica, que pode utilizar essas informações para estratégias de marketing e desenvolvimento de conteúdo mais eficazes.
+Em síntese, a combinação de técnicas avançadas de aprendizado de máquina e mineração de dados tem demonstrado um potencial significativo para prever com precisão o sucesso e as avaliações dos filmes. A integração de métodos como redes neurais, Random Forest e técnicas de clustering permite uma compreensão mais aprofundada dos fatores que influenciam a recepção crítica e a popularidade dos filmes. Estes avanços oferecem insights valiosos para este trabalho, que pode se valer de indicadores de algoritmos melhor sucedidos para limitar o escopo da presente pesquisa.
 
 # Descrição do _dataset_ selecionado
 
@@ -339,7 +334,7 @@ Interpretação dos resultados: Relatórios que destacam as descobertas principa
 5. Implementation:
 Como podemos implementar a análise passo a passo e de um jeito compreensível?
 
-Coleta e pré-processamento dos dados: Limpeza dos dados, tratamento de valores ausentes e transformação de atributos categóricos em formatos numéricos utilizáveis para modelos de aprendizado de máquina.
+Coleta e pré-processamento dos dados: Ingestão e limpeza dos dados, tratamento de valores ausentes e transformação de atributos categóricos em formatos numéricos utilizáveis para modelos de aprendizado de máquina.
 Análise exploratória de dados (EDA): Exploração de correlações entre características e a nota média, identificação de padrões, outliers e distribuição dos dados.
 Divisão do dataset: Separação dos dados em conjuntos de treinamento e teste (e possivelmente validação cruzada).
 Seleção e construção de modelos: Experimentação com diferentes algoritmos de aprendizado de máquina, como Regressão Linear, Random Forest, Redes Neurais e Support Vector Machines (SVM).
@@ -373,30 +368,27 @@ Exploração de novas características: Incorporar dados adicionais, como orçam
 
 # Referências
 
-AFZAL, H.; ALI, A.; MUKHTAR, M. Prediction of movies popularity using machine learning techniques. 2016. Disponível em: https://www.researchgate.net/profile/Hammad-Afzal/publication/311913687_Prediction_of_Movies_popularity_Using_Machine_Learning_Techniques/links/586253ce08ae6eb871ab0748/Prediction-of-Movies-popularity-Using-Machine-Learning-Techniques.pdf. Acesso em: 01 set. 2024.
+AFZAL, Hammad; LATIF, Muhammad Hassan. Prediction of Movies Popularity Using Machine Learning Techniques. IJCSNS International Journal of Computer Science and Network Security, v. 16, n. 8, ago. 2016. Disponível em: https://www.researchgate.net/publication/311913687_Prediction_of_Movies_popularity_Using_Machine_Learning_Techniques. Acesso em: 1 set. 2024.
 
-DHIR, Rijul; RAJ, Anand. Movie Success Prediction Using Machine Learning Algorithms and Their Comparison. In: 2018 First International Conference on Secure Cyber Computing and Communication (ICSCCC). 2018.
+BRISTO, Warda; ZAMAN, Zakia; SULTANA, Nishat. Predicting IMDb rating of movies by machine learning techniques. IEEE Access, v. 7, p. 79592-79603, 2019. Disponível em: https://ieeexplore.ieee.org/abstract/document/8944604. Acesso em: 28 ago. 2024.
 
-IYER, A.; RANGANATHAN, A. Movie success prediction using machine learning algorithms and their comparison. 2019 IEEE Calcutta Conference (CALCON), p. 103-108, 2019. Disponível em: https://ieeexplore.ieee.org/abstract/document/8703320. Acesso em: 01 set. 2024.
+DHIR, Rijul; RAJ, Anand. Movie Success Prediction Using Machine Learning Algorithms and Their Comparison. In: 2018 First International Conference on Secure Cyber Computing and Communication (ICSCCC). 2018. Disponível em: https://ieeexplore.ieee.org/abstract/document/8703320. Acesso em: 01 set. 2024.
 
-KUMAR, A.; SINGH, A.; KUMAR, R. A data mining approach to analysis and prediction of movie ratings. WIT Transactions on Information and Communication Technologies, v. 33, p. 219-228, 2018. Disponível em: https://www.witpress.com/elibrary/wit-transactions-on-information-and-communication-technologies/33/14248. Acesso em: 28 ago. 2024.
+ELIAISHBERG, Moshe; HAUSER, John R.; MUKHERJEE, Anindya. The motion picture industry: Critical issues and a research agenda. Journal of Marketing Research, v. 37, n. 3, p. 311-327, 2000.
 
-LATIF, Muhammad Hassan; AFZAL, Hammad. Prediction of Movies Popularity Using Machine Learning Techniques. IJCSNS International Journal of Computer Science and Network Security, v. 16, n. 8, ago. 2016. Disponível em: https://www.researchgate.net/publication/311913687_Prediction_of_Movies_popularity_Using_Machine_Learning_Techniques. Acesso em: 1 set. 2024.
+GOWER STREET ANALYTICS. Cinema bilheteira global. 2023. Disponível em: https://www.gowerst.com/global-box-office-report-2023. Acesso em: 20 agosto 2024.
+
+JAVARIA, Ahmad; PRAKASH, Duraisamy; AMR, Yousef; BUCKLES, Bill. Movie success prediction using data mining. 2017 IEEE 2nd International Conference on Cloud Computing and Big Data Analysis (ICCCBDA), p. 216-220, 2017. Disponível em: https://ieeexplore.ieee.org/abstract/document/8204173. Acesso em: 28 agosto de 2024.
 
 MANANAT, P. IMDB Dataset. 2024. Disponível em: https://www.kaggle.com/datasets/payamamanat/imbd-dataset/data. Acesso em: 20 ago. 2024.
 
 NOGUEIRA, G. Bilheteira. CNN Brasil, 2023. Disponível em: https://www.cnnbrasil.com.br/entretenimento/cinema-bilheteria-global-de-2023-foi-305-maior-que-a-de-2022/#:~:text=A%20ind%C3%BAstria%20cinematogr%C3%A1fica%20est%C3%A1%20em,dados%20da%20Gower%20Street%20Analytics. Acesso em: 20 ago. 2024.
 
-PANG, B.; SCHOENFELD, A.; COTTAM, M. Predicting IMDb rating of movies by machine learning techniques. IEEE Access, v. 7, p. 79592-79603, 2019. Disponível em: https://ieeexplore.ieee.org/abstract/document/8944604. Acesso em: 28 ago. 2024.
+SARAEE, M.; WHITE, S.; ECCLESTON, J. A data mining approach to analysis and prediction of movie ratings. WIT Transactions on Information and Communication Technologies, v. 33, p. 219-228, 2018. Disponível em: https://www.witpress.com/elibrary/wit-transactions-on-information-and-communication-technologies/33/14248. Acesso em: 28 ago. 2024.
 
 VOGEL, Steven S. Entertainment industry economics: A guide for financial analysis. 9. ed. Cambridge: Cambridge University Press, 2014.
 
-GOWER STREET ANALYTICS. Cinema bilheteira global. 2023. Disponível em: https://www.gowerst.com/global-box-office-report-2023. Acesso em: 20 agosto 2024.
-
-ELIAISHBERG, Moshe; HAUSER, John R.; MUKHERJEE, Anindya. The motion picture industry: Critical issues and a research agenda. Journal of Marketing Research, v. 37, n. 3, p. 311-327, 2000.
-
 THE FLASH. Dir. Andy Muschietti. Warner Bros, 2023.
 
-YANG, L.; HONG, J.; MA, S. Movie success prediction using data mining. 2017 IEEE 2nd International Conference on Cloud Computing and Big Data Analysis (ICCCBDA), p. 216-220, 2017. Disponível em: https://ieeexplore.ieee.org/abstract/document/8204173. Acesso em: 28 agosto de 2024..
 
 
