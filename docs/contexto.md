@@ -303,13 +303,21 @@ AFZAL, H.; ALI, A.; MUKHTAR, M. Prediction of movies popularity using machine le
 
 IYER, A.; RANGANATHAN, A. Movie success prediction using machine learning algorithms and their comparison. 2019 IEEE Calcutta Conference (CALCON), p. 103-108, 2019. Disponível em: https://ieeexplore.ieee.org/abstract/document/8703320. Acesso em: 01 set. 2024.
 
-KUMAR, A.; SINGH, A.; KUMAR, R. A data mining approach to analysis and prediction of movie ratings. WIT Transactions on Information and Communication Technologies, v. 33, p. 219-228, 2018. Disponível em: https://www.witpress.com/elibrary/wit-transactions-on-information-and-communication-technologies/33/14248. Acesso em: 28 agosto de 2024.
+KUMAR, A.; SINGH, A.; KUMAR, R. A data mining approach to analysis and prediction of movie ratings. WIT Transactions on Information and Communication Technologies, v. 33, p. 219-228, 2018. Disponível em: https://www.witpress.com/elibrary/wit-transactions-on-information-and-communication-technologies/33/14248. Acesso em: 28 ago. 2024.
 
-MANANAT, P. IMDB Dataset. 2024. Disponível em: https://www.kaggle.com/datasets/payamamanat/imbd-dataset/data. Acesso em: 20 agosto de 2024..
+MANANAT, P. IMDB Dataset. 2024. Disponível em: https://www.kaggle.com/datasets/payamamanat/imbd-dataset/data. Acesso em: 20 ago. 2024.
 
-NOGUEIRA, G. Bilheteira. CNN Brasil, 2023. Disponível em: https://www.cnnbrasil.com.br/entretenimento/cinema-bilheteria-global-de-2023-foi-305-maior-que-a-de-2022/#:~:text=A%20ind%C3%BAstria%20cinematogr%C3%A1fica%20est%C3%A1%20em,dados%20da%20Gower%20Street%20Analytics. Acesso em: 20 agosto de 2024.
+NOGUEIRA, G. Bilheteira. CNN Brasil, 2023. Disponível em: https://www.cnnbrasil.com.br/entretenimento/cinema-bilheteria-global-de-2023-foi-305-maior-que-a-de-2022/#:~:text=A%20ind%C3%BAstria%20cinematogr%C3%A1fica%20est%C3%A1%20em,dados%20da%20Gower%20Street%20Analytics. Acesso em: 20 ago. 2024.
 
-PANG, B.; SCHOENFELD, A.; COTTAM, M. Predicting IMDb rating of movies by machine learning techniques. IEEE Access, v. 7, p. 79592-79603, 2019. Disponível em: https://ieeexplore.ieee.org/abstract/document/8944604. Acesso em: 28 agosto de 2024..
+PANG, B.; SCHOENFELD, A.; COTTAM, M. Predicting IMDb rating of movies by machine learning techniques. IEEE Access, v. 7, p. 79592-79603, 2019. Disponível em: https://ieeexplore.ieee.org/abstract/document/8944604. Acesso em: 28 ago. 2024.
+
+VOGEL, Steven S. Entertainment industry economics: A guide for financial analysis. 9. ed. Cambridge: Cambridge University Press, 2014.
+
+GOWER STREET ANALYTICS. Cinema bilheteira global. 2023. Disponível em: https://www.gowerst.com/global-box-office-report-2023. Acesso em: 20 agosto 2024.
+
+ELIAISHBERG, Moshe; HAUSER, John R.; MUKHERJEE, Anindya. The motion picture industry: Critical issues and a research agenda. Journal of Marketing Research, v. 37, n. 3, p. 311-327, 2000.
+
+THE FLASH. Dir. Andy Muschietti. Warner Bros, 2023.
 
 YANG, L.; HONG, J.; MA, S. Movie success prediction using data mining. 2017 IEEE 2nd International Conference on Cloud Computing and Big Data Analysis (ICCCBDA), p. 216-220, 2017. Disponível em: https://ieeexplore.ieee.org/abstract/document/8204173. Acesso em: 28 agosto de 2024..
 
