@@ -145,6 +145,11 @@ Kumar, Singh e Kumar (2018) exploraram a análise de características dos filmes
 
 A previsão da popularidade dos filmes, por outro lado, foi investigada por Afzal, Ali e Mukhtar (2016), que utilizaram técnicas de aprendizado de máquina, incluindo regressão logística e redes neurais profundas. A pesquisa mostrou que a combinação de características como gênero, marketing e elenco é crucial para prever a popularidade, com redes neurais profundas demonstrando a maior precisão.
 
+Em Latif e  Afzal(2016), o trabalho foi realizado sobre um dataset que considera filmes lançados no período compreendido entre e 2004 e 2014. Os dados foram extraídos pelos autores diretamente do IMDB. O estudo avaliou os seguintes classifiers: Logistic Regression, Simple Logistic, Multilayer Perceptron, J48, Naive Bayes e PART. Como resultado, a mais alta precisão foi alcançada com logística simples e regressão logística, 84,34% e 84,15% respectivamente, seguidos dos resultados da árvore de decisão j48, com 82,42%.
+
+Dhir e Raj(2018) também realizaram seus estudos sobre dados do IMDb. Os autores se propuseram a prever o quão bem-sucedido um filme seria em sua pontuação no IMDb antes de sua chegada às bilheterias. Foram usados diferentes algoritmos no trabalho de pesquisa para análise, mas entre todos a floresta aleatória deu a melhor precisão de previsão Na análise exploratória, foi apontado que o número de usuários votantes, o número de críticos para avaliações, o número de curtidas no Facebook, a duração do filme e a coleção bruta de filmes afetam a pontuação do IMDb fortemente. Filmes de drama e biográficos foram os melhores pontuados entre os gêneros.
+
+
 Em síntese, a combinação de técnicas avançadas de aprendizado de máquina e mineração de dados tem demonstrado um potencial significativo para prever com precisão o sucesso e as avaliações dos filmes. A integração de métodos como redes neurais, Random Forest e técnicas de clustering permite uma compreensão mais aprofundada dos fatores que influenciam a recepção crítica e a popularidade dos filmes. Estes avanços oferecem insights valiosos para a indústria cinematográfica, que pode utilizar essas informações para estratégias de marketing e desenvolvimento de conteúdo mais eficazes.
 
 # Descrição do _dataset_ selecionado
@@ -370,9 +375,13 @@ Exploração de novas características: Incorporar dados adicionais, como orçam
 
 AFZAL, H.; ALI, A.; MUKHTAR, M. Prediction of movies popularity using machine learning techniques. 2016. Disponível em: https://www.researchgate.net/profile/Hammad-Afzal/publication/311913687_Prediction_of_Movies_popularity_Using_Machine_Learning_Techniques/links/586253ce08ae6eb871ab0748/Prediction-of-Movies-popularity-Using-Machine-Learning-Techniques.pdf. Acesso em: 01 set. 2024.
 
+DHIR, Rijul; RAJ, Anand. Movie Success Prediction Using Machine Learning Algorithms and Their Comparison. In: 2018 First International Conference on Secure Cyber Computing and Communication (ICSCCC). 2018.
+
 IYER, A.; RANGANATHAN, A. Movie success prediction using machine learning algorithms and their comparison. 2019 IEEE Calcutta Conference (CALCON), p. 103-108, 2019. Disponível em: https://ieeexplore.ieee.org/abstract/document/8703320. Acesso em: 01 set. 2024.
 
 KUMAR, A.; SINGH, A.; KUMAR, R. A data mining approach to analysis and prediction of movie ratings. WIT Transactions on Information and Communication Technologies, v. 33, p. 219-228, 2018. Disponível em: https://www.witpress.com/elibrary/wit-transactions-on-information-and-communication-technologies/33/14248. Acesso em: 28 ago. 2024.
+
+LATIF, Muhammad Hassan; AFZAL, Hammad. Prediction of Movies Popularity Using Machine Learning Techniques. IJCSNS International Journal of Computer Science and Network Security, v. 16, n. 8, ago. 2016. Disponível em: https://www.researchgate.net/publication/311913687_Prediction_of_Movies_popularity_Using_Machine_Learning_Techniques. Acesso em: 1 set. 2024.
 
 MANANAT, P. IMDB Dataset. 2024. Disponível em: https://www.kaggle.com/datasets/payamamanat/imbd-dataset/data. Acesso em: 20 ago. 2024.
 
