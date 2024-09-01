@@ -292,10 +292,79 @@ Este conjunto de dados oferece uma visão abrangente sobre filmes e séries cont
 
 # Canvas analítico
 
-Nesta seção, você deverá estruturar o seu Canvas Analítico. O Canvas Analítico tem o papel de registrar a organização das ideias e apresentar o modelo de negócio. O Canvas Analítico deverá ser preenchido integralmente mesmo que você não tenha "tantas certezas".
+1. Questão:
+O que queremos saber sobre o software/processos/uso/organização/etc?
+
+Queremos prever a nota média de um filme no IMDb utilizando técnicas de aprendizado de máquina baseadas em características específicas, como gênero, elenco, sinopse, ano de lançamento e avaliações dos espectadores. A previsão dessa nota ajudará a entender quais fatores são mais influentes no sucesso de um filme em termos de aceitação crítica e popular. Buscamos também identificar como essas características podem ser utilizadas para melhorar a tomada de decisões na produção e promoção de filmes, maximizando o retorno sobre o investimento.
+
+2. Data Sources:
+Que dados podem possivelmente responder nossa pergunta? Que informações precisamos?
+
+Para responder a nossa pergunta, usaremos o IMDb Dataset, que contém aproximadamente 10.000 registros com os seguintes atributos:
+
+Título: Nome do filme ou série.
+Ano de Lançamento: Ano em que o filme ou série foi lançado.
+Certificado: Classificação indicativa (ex.: TV-MA, PG-13).
+Duração: Tempo de execução do filme ou série.
+Gênero: Gênero principal ou múltiplos gêneros do filme ou série (ex.: comédia, drama).
+Avaliação (Rating): Nota média atribuída pelos usuários no IMDb.
+Descrição (Sinopse): Breve descrição ou sinopse do filme ou série.
+Elenco (Stars): Lista de atores principais.
+Número de Votos (Votes): Número total de votos que o filme ou série recebeu.
+
+3. Heuristics:
+Quais hipóteses queremos fazer para simplificar a resposta da questão?
+
+Hipótese 1: Filmes com atores renomados tendem a receber notas mais altas no IMDb.
+Hipótese 2: Certos gêneros, como drama ou comédia, têm uma correlação mais forte com notas mais altas em comparação com outros gêneros.
+Hipótese 3: Filmes lançados em anos recentes tendem a receber mais avaliações e, portanto, notas mais representativas.
+Hipótese 4: A duração e o certificado de classificação podem ter uma influência moderada nas avaliações, refletindo preferências do público por certos tipos de filmes.
+Hipótese 5: Filmes com uma descrição mais detalhada ou elaborada tendem a ter avaliações mais altas, pois isso pode refletir em um melhor desenvolvimento de enredo e produção.
+
+4. Validation:
+Quais resultados esperamos da nossa análise? Como ela é analisada e apresentada de uma maneira entendível?
+
+Esperamos construir um modelo preditivo com uma boa precisão (idealmente acima de 80%) para prever a nota média de um filme no IMDb com base nas características selecionadas. A análise será apresentada em termos de:
+
+Precisão do modelo: Métricas de desempenho como RMSE (Root Mean Squared Error), MAE (Mean Absolute Error), e R² (Coeficiente de Determinação).
+Importância das variáveis: Identificação de quais características têm o maior impacto nas previsões.
+Visualizações gráficas: Gráficos de dispersão, matrizes de correlação e gráficos de importância de recursos para ajudar na interpretação dos resultados.
+Interpretação dos resultados: Relatórios que destacam as descobertas principais e oferecem recomendações práticas para os stakeholders.
+
+5. Implementation:
+Como podemos implementar a análise passo a passo e de um jeito compreensível?
+
+Coleta e pré-processamento dos dados: Limpeza dos dados, tratamento de valores ausentes e transformação de atributos categóricos em formatos numéricos utilizáveis para modelos de aprendizado de máquina.
+Análise exploratória de dados (EDA): Exploração de correlações entre características e a nota média, identificação de padrões, outliers e distribuição dos dados.
+Divisão do dataset: Separação dos dados em conjuntos de treinamento e teste (e possivelmente validação cruzada).
+Seleção e construção de modelos: Experimentação com diferentes algoritmos de aprendizado de máquina, como Regressão Linear, Random Forest, Redes Neurais e Support Vector Machines (SVM).
+Treinamento e ajuste de modelos: Ajuste de hiperparâmetros para melhorar a precisão dos modelos.
+Avaliação do modelo: Uso de métricas para comparar a performance dos modelos e selecionar o melhor.
+Interpretação dos resultados: Análise da importância das características e visualizações dos resultados.
+Comunicação dos resultados: Apresentação dos resultados e recomendações aos stakeholders.
+
+6. Results:
+Quais são os insights principais da nossa análise?
+
+Determinação das características que mais influenciam as notas dos filmes no IMDb (por exemplo, gênero, elenco, etc.).
+Identificação de padrões de sucesso (ex.: filmes de certos gêneros ou com determinados atores têm avaliações consistentemente mais altas).
+Insights sobre a correlação entre o número de votos e a avaliação final do filme.
+Descobertas sobre como fatores como ano de lançamento e duração influenciam a aceitação do público.
+
+7. Next Steps:
+Quais ações podemos tomar a partir dos resultados? Quem ou o que devemos nos dirigir depois?
+
+Produtores e Executivos de Estúdios: Usar os insights para decisões estratégicas em projetos futuros, incluindo escolha de elenco, definição de gênero e estratégias de marketing.
+Profissionais de Marketing Cinematográfico: Ajustar campanhas de marketing com base nas características que mais impactam a avaliação do público.
+Investidores: Orientar investimentos com base em previsões mais confiáveis sobre o sucesso potencial dos filmes.
+Refinamento do modelo: Continuar a ajustar o modelo com novos dados e características para melhorar a precisão.
+Exploração de novas características: Incorporar dados adicionais, como orçamento de produção e informações de mídia social, para melhorar ainda mais a precisão das previsões.
+
 
 > **Links Úteis**:
 > - [Modelo do Canvas Analítico](https://github.com/ICEI-PUC-Minas-PMV-SI/PesquisaExperimentacao-Template/blob/main/help/Software-Analtics-Canvas-v1.0.pdf)
+
+
 
 # Referências
 
