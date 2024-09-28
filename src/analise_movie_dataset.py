@@ -209,10 +209,26 @@ df = pd.read_csv('src/movie_dataset.csv', encoding='utf-8')
 ############################# VERIFICAÇÃO DE VARIÁVEIS ZERADAS  #############################
 
 
-# Contar quantos registros têm valor 0 para todas as colunas numéricas do dataset
-zeros_por_coluna = {coluna: (df[coluna] == 0).sum() for coluna in df.columns if df[coluna].dtype != 'object'}
+# # Contar quantos registros têm valor 0 para todas as colunas numéricas do dataset
+# zeros_por_coluna = {coluna: (df[coluna] == 0).sum() for coluna in df.columns if df[coluna].dtype != 'object'}
 
-# Exibir os resultados no formato de um relatório claro
-print("### Quantidade de Valores 0 por Coluna ###")
-for coluna, zeros in zeros_por_coluna.items():
-    print(f"{coluna}: {zeros}")
+# print("### Quantidade de Valores 0 por Coluna ###")
+# for coluna, zeros in zeros_por_coluna.items():
+#     print(f"{coluna}: {zeros}")
+
+
+############################# VERIFICAÇÃO DE VARIÁVEIS ZERADAS  #############################
+
+colunas_selecionadas = ['budget', 'popularity', 'revenue', 'vote_average', 'vote_count']
+
+df_selecionado = df[colunas_selecionadas]
+
+correlacao = df_selecionado.corr()
+
+# Configurar o gráfico de mapa de calor
+plt.figure(figsize=(8, 6))
+sns.heatmap(correlacao, annot=True, cmap='coolwarm', linewidths=0.5)
+
+plt.title('Mapa de Calor - Correlação entre Variáveis')
+
+plt.show()
