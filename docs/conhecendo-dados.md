@@ -1,6 +1,38 @@
 # Conhecendo os dados
 A partir daqui, exploramos a base de dados do dataset utilizado, para compreender sua estrutura, detectar outliers e avaliar as relações entre as variáveis analisadas. As análises incluem medidas de tendência central, dispersão e visualizações gráficas.
 
+O dataset possuí 24 colunas das quais estão dividas entre 6 colunas Quantitativas e 18 colunas Qualitativas.
+
+Colunas Quantitativas:
+
+- Budget: Orçamento.
+- Popularity: Medida de popularidade.
+- Revenue: Receita gerada.
+- Vote_average: Média de votos ou avaliações.
+- Vote_count: Número total de votos recebidos.
+- Runtime: Duração do filme em minutos.
+  
+Colunas Qualitativas:
+
+- Index: Índice (numérica, mas categórica no contexto do dataset).
+- Genres: Uma string conmtendo múltiplos gêneros.
+- Homepage: URL dos sites principais.
+- id: Identificador único (qualitativa, numérico no formato).
+- Keywords: Palavras-chave descrevendo temas ou elementos importantes .
+- Original_language: Idioma original que o filme foi produzido.
+- Original_title: Título original.
+- Overview: Resumo ou sinopse.
+- Production_companies: Companhias envolvidas na produção do filme.
+- Production_countries: Lista de países onde o filme foi produzido.
+- Release_date: Data de lançamento (qualitativa, tratada como texto).
+- Spoken_languages: Idiomas falados.
+- Status: Status de lançamento:
+- Tagline: Frase de efeito ou slogan do filme.
+- Title: Título atual.
+- Cast: Lista de atores principais.
+- Crew: Lista da equipe técnica e criativa envolvida no filme.
+- Director: Diretor.
+
 # Estatísticas Descritivas
 
 A estátisca descritiva fornece uma visão geral dos dados, resumindo suas principais características
