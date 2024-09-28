@@ -70,16 +70,16 @@ Mínimo e Máximo:
 
 ### Modas ###
 
-**Moda Rating**: 6.0
-**Moda Votos**: 0.0
-**Moda Orçamento**: 0
-**Moda Popularidade**: 8.902102000000003
-**Moda Receita**: 0
+- **Moda Rating**: 6.0
+- **Moda Votos**: 0.0
+- **Moda Orçamento**: 0
+- **Moda Popularidade**: 8.902102000000003
+- **Moda Receita**: 0
 
-- A moda do vote_average é 6.0, indicando que essa é a avaliação mais frequente entre os filmes.
-- O vote_count tem uma moda de 0.0, sugerindo que muitos filmes não receberam votos, o que pode ser um indicador de que eles não foram amplamente divulgados ou vistos.
-- A moda de popularidade mais comum é de 8.90, indicando que muitos filmes atingem esse nível de aceitação ou que poucos filmes se destacam significativamente.
-- As modas para orçamento  e receita são 0, indicando que muitos filmes tiveram orçamentos baixos ou não geraram receita significativa.
+A moda do vote_average é 6.0, indicando que essa é a avaliação mais frequente entre os filmes.
+O vote_count tem uma moda de 0.0, sugerindo que muitos filmes não receberam votos, o que pode ser um indicador de que eles não foram amplamente divulgados ou vistos.
+A moda de popularidade mais comum é de 8.90, indicando que muitos filmes atingem esse nível de aceitação ou que poucos filmes se destacam significativamente.
+As modas para orçamento  e receita são 0, indicando que muitos filmes tiveram orçamentos baixos ou não geraram receita significativa.
 
 ### Quantidade de Valores 0 por Coluna ###
 
