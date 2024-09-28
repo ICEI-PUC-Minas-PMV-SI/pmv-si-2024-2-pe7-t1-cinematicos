@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-df = pd.read_csv('data/movie_dataset.csv', encoding='utf-8')
+df = pd.read_csv('src/movie_dataset.csv', encoding='utf-8')
 
 
 ############################# Estastísticas Descritivas #############################
@@ -135,72 +135,84 @@ df = pd.read_csv('data/movie_dataset.csv', encoding='utf-8')
 ############################# GRAFICOS DE DISPERSÃO #############################
 
 
-plt.figure(figsize=(18, 12))
+# plt.figure(figsize=(18, 12))
 
-# Dispersão entre vote_count e vote_average
-plt.subplot(3, 3, 1)
-sns.scatterplot(x='vote_count', y='vote_average', data=df)
-plt.xscale('log')
-plt.title('Dispersão entre Votes e Rating')
-plt.xlabel('Número de Votos')
-plt.ylabel('Média de Votos')
+# # Dispersão entre vote_count e vote_average
+# plt.subplot(3, 3, 1)
+# sns.scatterplot(x='vote_count', y='vote_average', data=df)
+# plt.xscale('log')
+# plt.title('Dispersão entre Votes e Rating')
+# plt.xlabel('Número de Votos')
+# plt.ylabel('Média de Votos')
 
-# Dispersão entre budget e vote_average
-plt.subplot(3, 3, 2)
-sns.scatterplot(x='budget', y='vote_average', data=df)
-plt.xscale('log')
-plt.title('Dispersão entre Orçamento e Rating')
-plt.xlabel('Orçamento')
-plt.ylabel('Média de Votos')
+# # Dispersão entre budget e vote_average
+# plt.subplot(3, 3, 2)
+# sns.scatterplot(x='budget', y='vote_average', data=df)
+# plt.xscale('log')
+# plt.title('Dispersão entre Orçamento e Rating')
+# plt.xlabel('Orçamento')
+# plt.ylabel('Média de Votos')
 
-# Dispersão entre popularity e vote_average
-plt.subplot(3, 3, 3)
-sns.scatterplot(x='popularity', y='vote_average', data=df)
-plt.title('Dispersão entre Popularidade e Rating')
-plt.xlabel('Popularidade')
-plt.ylabel('Média de Votos')
+# # Dispersão entre popularity e vote_average
+# plt.subplot(3, 3, 3)
+# sns.scatterplot(x='popularity', y='vote_average', data=df)
+# plt.title('Dispersão entre Popularidade e Rating')
+# plt.xlabel('Popularidade')
+# plt.ylabel('Média de Votos')
 
-# Dispersão entre revenue e vote_average
-plt.subplot(3, 3, 4)
-sns.scatterplot(x='revenue', y='vote_average', data=df)
-plt.xscale('log')
-plt.title('Dispersão entre Receita e Rating')
-plt.xlabel('Receita')
-plt.ylabel('Média de Votos')
+# # Dispersão entre revenue e vote_average
+# plt.subplot(3, 3, 4)
+# sns.scatterplot(x='revenue', y='vote_average', data=df)
+# plt.xscale('log')
+# plt.title('Dispersão entre Receita e Rating')
+# plt.xlabel('Receita')
+# plt.ylabel('Média de Votos')
 
-# Dispersão entre vote_count e popularity
-plt.subplot(3, 3, 5)
-sns.scatterplot(x='vote_count', y='popularity', data=df)
-plt.xscale('log')
-plt.title('Dispersão entre Número de Votos e Popularidade')
-plt.xlabel('Número de Votos')
-plt.ylabel('Popularidade')
+# # Dispersão entre vote_count e popularity
+# plt.subplot(3, 3, 5)
+# sns.scatterplot(x='vote_count', y='popularity', data=df)
+# plt.xscale('log')
+# plt.title('Dispersão entre Número de Votos e Popularidade')
+# plt.xlabel('Número de Votos')
+# plt.ylabel('Popularidade')
 
-# Dispersão entre budget e popularity
-plt.subplot(3, 3, 6)
-sns.scatterplot(x='budget', y='popularity', data=df)
-plt.xscale('log')
-plt.title('Dispersão entre Orçamento e Popularidade')
-plt.xlabel('Orçamento')
-plt.ylabel('Popularidade')
+# # Dispersão entre budget e popularity
+# plt.subplot(3, 3, 6)
+# sns.scatterplot(x='budget', y='popularity', data=df)
+# plt.xscale('log')
+# plt.title('Dispersão entre Orçamento e Popularidade')
+# plt.xlabel('Orçamento')
+# plt.ylabel('Popularidade')
 
-# Dispersão entre budget e revenue
-plt.subplot(3, 3, 7)
-sns.scatterplot(x='budget', y='revenue', data=df)
-plt.xscale('log')
-plt.yscale('log')
-plt.title('Dispersão entre Orçamento e Receita')
-plt.xlabel('Orçamento')
-plt.ylabel('Receita')
+# # Dispersão entre budget e revenue
+# plt.subplot(3, 3, 7)
+# sns.scatterplot(x='budget', y='revenue', data=df)
+# plt.xscale('log')
+# plt.yscale('log')
+# plt.title('Dispersão entre Orçamento e Receita')
+# plt.xlabel('Orçamento')
+# plt.ylabel('Receita')
 
-# Dispersão entre popularity e revenue
-plt.subplot(3, 3, 8)
-sns.scatterplot(x='popularity', y='revenue', data=df)
-plt.xscale('log')
-plt.yscale('log')
-plt.title('Dispersão entre Popularidade e Receita')
-plt.xlabel('Popularidade')
-plt.ylabel('Receita')
+# # Dispersão entre popularity e revenue
+# plt.subplot(3, 3, 8)
+# sns.scatterplot(x='popularity', y='revenue', data=df)
+# plt.xscale('log')
+# plt.yscale('log')
+# plt.title('Dispersão entre Popularidade e Receita')
+# plt.xlabel('Popularidade')
+# plt.ylabel('Receita')
 
-plt.tight_layout()
-plt.show()
+# plt.tight_layout()
+# plt.show()
+
+
+############################# VERIFICAÇÃO DE VARIÁVEIS ZERADAS  #############################
+
+
+# Contar quantos registros têm valor 0 para todas as colunas numéricas do dataset
+zeros_por_coluna = {coluna: (df[coluna] == 0).sum() for coluna in df.columns if df[coluna].dtype != 'object'}
+
+# Exibir os resultados no formato de um relatório claro
+print("### Quantidade de Valores 0 por Coluna ###")
+for coluna, zeros in zeros_por_coluna.items():
+    print(f"{coluna}: {zeros}")
