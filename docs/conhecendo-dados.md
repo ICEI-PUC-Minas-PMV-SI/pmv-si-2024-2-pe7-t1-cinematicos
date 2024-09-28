@@ -19,21 +19,38 @@ A estátisca descritiva fornece uma visão geral dos dados, resumindo suas princ
 
 Contagem (count): Para todas as métricas possuindo 4803 registros.
 
-Média (mean): A média do vote_average é de aproximadamente 6.09, indicando que em média os filmes avaliados têm uma nota razoável.
+Média (mean): 
+A média do vote_average é de aproximadamente 6.09, indicando que em média os filmes avaliados têm uma nota razoável.
 O vote_count médio é 690.21, o que mostra que, em média, cada filme recebeu um número moderado de votos.
-O budget médio seria de aproximadamente 29 milhões e a revenue média seria cerca de 82 milhões, indicando que em média os filmes geram uma receita significativamente maior que a receita usada em seu orçamento.
-A média de popularidade é 21.49, mostrando que pode estar variando bastante entre os filmes.
+O budget médio seria de aproximadamente 29 milhões e a revenue média seria cerca de 82 milhões, indicando que os filmes geram uma receita significativamente maior que a receita usada em seu orçamento.
+A média de popularity é 21.49, mostrando uma grande variação entre os filmes.
 
-Desvio Padrão (std): O desvio padrão do vote_average (1.19) indica que as avaliações dos filmes variam moderadamente em relação à média.
-O vote_count tem um desvio padrão de 1234.59, sugerindo que alguns filmes recebem muito mais votos do que a média.
+Desvio Padrão (std): 
+O desvio padrão do vote_average (1.19) indica que as avaliações dos filmes variam moderadamente em relação à média.
+O vote_count tem um desvio padrão de 1234.59, sugerindo que alguns filmes recebem muitos votos acima da média.
 O budget e a revenue têm desvios de padrão altos, o que indica que pode haver uma grande variação nos valores; alguns filmes têm orçamentos muito altos e outros são significativamente mais baixos.
 
-Mínimo e Máximo: O vote_average varia de 0.00 a 10.00, indicando que existem filmes muito mal avaliados e outros que são considerados excelentes, considerando uma média que 50% dos filmes possui uma nota aceitável.
+Mínimo e Máximo: 
+O vote_average varia de 0.00 a 10.00, indicando que existem filmes que podem ter sido muito mal avaliados ou sem avaliação e outros que são considerados excelentes, considerando uma média que 50% dos filmes possui uma nota aceitável de 6.09.
 O vote_count varia de 0 a 13752, o que sugere que alguns filmes podem não ter recebido votos, enquanto outros tiveram uma recepção extremamente alta aos votos.
 O budget varia de 0 a cerca de 380 milhões, mostrando uma grande variedade nos valores do orçamento de vários filmes.
-A revenue também varia bastante, de 0 a aproximadamente 2.79 bilhões, indicando que alguns filmes podem não ter conseguido nenhum lucro ou seria um dado faltante para esses filmes.
+A revenue também varia bastante, de 0 a aproximadamente 2.79 bilhões, indicando que alguns filmes podem não ter conseguido nenhum lucro ou seria um dado nulo para esses filmes.
 
-Identificamos a presença de diversos valores como 0 afetando principalmente em vote_count, budget e revenue, indicando que alguns filmes podem não ter sido suficientemente populares não recebendo votos ou não tiveram orçamento e nem lucro,  podendo estar distorcendo as métricas.
+Modas
+
+- **Moda Rating**: 6.0
+- **Moda Votos**: 0.0
+- **Moda Orçamento**: 0
+- **Moda Popularidade**: 8.902102000000003
+- **Moda Receita**: 0
+
+A moda do vote_average é 6.0, indicando que essa é a avaliação mais frequente entre os filmes.
+O vote_count tem uma moda de 0.0, sugerindo que muitos filmes não receberam votos, o que pode ser um indicador de que eles não foram amplamente divulgados ou vistos.
+A moda de popularidade mais comum é de 8.90, indicando que muitos filmes atingem esse nível de aceitação ou que poucos filmes se destacam significativamente.
+As modas para orçamento  e receita são 0, indicando que muitos filmes tiveram orçamentos baixos ou não geraram receita significativa.
+
+Identificamos a presença de diversos valores como 0 afetando principalmente em vote_count, budget e revenue, indicando que alguns filmes podem não ter sido suficientemente populares, ou seja, não recebendo votos ou não tiveram orçamento e nem lucro, podendo estar distorcendo as métricas. 
+
 
 ## Carregamento e Visualização Inicial dos Dados
 O dataset contém informações sobre filmes e séries, incluindo título, ano de lançamento, classificação indicativa, duração, gênero, avaliação, descrição, elenco e número de votos. As primeiras linhas do dataset foram visualizadas para entender a estrutura dos dados.
