@@ -220,7 +220,7 @@ Os dados com valores nulos ou 0 precisam ser tratados para melhorar a qualidade 
 
 Nossa análise exploratória revela que, enquanto fatores financeiros e popularidade contribuem para o sucesso dos filmes, a percepção de qualidade depende de aspectos mais subjetivos. Há correlações razoavelmente fortes, no entanto elas não incluem o vote_average, dificultando seu uso para inferência do vote_average por meio de outros parâmetros. 
 
-Ferramentas
+## Ferramentas
 A maior parte das análises foi realizada utilizando a linguagem de programação Python, com as bibliotecas:
 
 Pandas: Para manipulação e análise de dados.
