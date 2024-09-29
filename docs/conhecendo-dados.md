@@ -81,6 +81,15 @@ O vote_count tem uma moda de 0.0, sugerindo que muitos filmes não receberam vot
 A moda de popularidade é de 8.90, indicando que muitos filmes atingem esse nível de aceitação ou que poucos filmes se destacam significativamente.
 As modas para orçamento e receita são 0, indicando que muitos filmes tiveram orçamentos baixos, não geraram receita significativa ou que os dados estão incompletos.
 
+### Distribuição dos Dados ###
+Os gráficos a seguir ilustram os parâmetros de estatística básica relatados acima: 
+
+![Box Plot 1](/docs/img/graf_box_plot1.png)
+![Box Plot 2](/docs/img/graf_box_plot2.png)
+
+![Gráfico de Distribuição 1](/docs/img/graf_distribuicao1.png)
+![Gráfico de Distribuição 2](/docs/img/graf_distribuicao2.png)
+
 ### Dispersão ###
 
 Os gráficos a seguir mostram diferentes relações entre variáveis como orçamento, receita, popularidade, votos e rating:
