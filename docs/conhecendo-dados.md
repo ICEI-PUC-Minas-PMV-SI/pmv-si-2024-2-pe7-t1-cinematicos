@@ -81,6 +81,14 @@ O vote_count tem uma moda de 0.0, sugerindo que muitos filmes não receberam vot
 A moda de popularidade é de 8.90, indicando que muitos filmes atingem esse nível de aceitação ou que poucos filmes se destacam significativamente.
 As modas para orçamento e receita são 0, indicando que muitos filmes tiveram orçamentos baixos, não geraram receita significativa ou que os dados estão incompletos.
 
+### Dispersão ###
+
+Os gráficos a seguir mostram diferentes relações entre variáveis como orçamento, receita, popularidade, votos e rating:
+
+![Grafícos de Dispersão](/docs/img/graf_dispersão.png)
+
+Podemos observar algumas correlações claras, como entre orçamento e receita, e popularidade e número de votos. No entanto, as correlações entre rating e outras variáveis não são tão fortes, sugerindo que a qualidade percebida dos filmes não depende exclusivamente de fatores como orçamento ou popularidade. Há uma leve tendência de aumento no rating conforme o orçamento aumenta, mas não é uma relação clara ou muito forte. Isso sugere que um orçamento maior não garante, necessariamente, uma melhor avaliação. A maioria dos filmes com alta popularidade possui receitas mais elevadas, sugerindo que a popularidade contribui para o sucesso financeiro, mas há também uma boa dispersão, indicando que nem todos os filmes populares são altamente lucrativos. 
+
 ### Quantidade de Valores 0 por Coluna ###
 
 Diante dos resultados descritos acima, se tornou evidente o fato do grande número de valores definidos como 0. Um levantamento foi realizado para avaliar mais a fundo o tamanho e o impacto desses casos no trabalho. 
