@@ -217,18 +217,65 @@ df = pd.read_csv('src/movie_dataset.csv', encoding='utf-8')
 #     print(f"{coluna}: {zeros}")
 
 
-############################# VERIFICAÇÃO DE VARIÁVEIS ZERADAS  #############################
+############################# GRÁFICO MAPA DE CALOR  #############################
 
-colunas_selecionadas = ['budget', 'popularity', 'revenue', 'vote_average', 'vote_count']
+# colunas_selecionadas = ['budget', 'popularity', 'revenue', 'vote_average', 'vote_count']
 
-df_selecionado = df[colunas_selecionadas]
+# df_selecionado = df[colunas_selecionadas]
 
-correlacao = df_selecionado.corr()
+# correlacao = df_selecionado.corr()
 
-# Configurar o gráfico de mapa de calor
-plt.figure(figsize=(8, 6))
-sns.heatmap(correlacao, annot=True, cmap='coolwarm', linewidths=0.5)
+# plt.figure(figsize=(8, 6))
+# sns.heatmap(correlacao, annot=True, cmap='coolwarm', linewidths=0.5)
 
-plt.title('Mapa de Calor - Correlação entre Variáveis')
+# plt.title('Mapa de Calor - Correlação entre Variáveis')
 
+# plt.show()
+
+############################# Teste #############################
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Carregar o dataset
+df = pd.read_csv('src/movie_dataset.csv', encoding='utf-8')
+
+# Criar uma coluna para contar o número de filmes por diretor
+df['director_count'] = df.groupby('director')['director'].transform('count')
+
+# Classificar diretores em renomados e não renomados
+df['renomado'] = df['director_count'].apply(lambda x: 'Renomado' if x >= 2 else 'Não Renomado')
+
+# Calcular a média de vote_average por grupo
+media_por_grupo = df.groupby('renomado')['vote_average'].mean().reset_index()
+
+# Contar a quantidade de filmes por grupo
+quantidade_por_grupo = df['renomado'].value_counts().reset_index()
+quantidade_por_grupo.columns = ['renomado', 'quantidade']
+
+# Unir as informações de média e quantidade
+resultado = pd.merge(quantidade_por_grupo, media_por_grupo, on='renomado')
+
+# Criar o gráfico de rosca
+plt.figure(figsize=(8, 6))  # Tamanho do gráfico menor
+# Alterar as cores para azul claro e azul menos claro
+plt.pie(resultado['quantidade'], labels=resultado['renomado'], autopct='%1.1f%%', startangle=140, colors=['#ADD8E6', '#4682B4'])
+
+# Criar um círculo branco no meio para formar um gráfico de rosca
+centre_circle = plt.Circle((0, 0), 0.70, fc='white')
+fig = plt.gcf()
+fig.gca().add_artist(centre_circle)
+
+# Adicionar detalhes no gráfico
+plt.axis('equal')  # Equal aspect ratio ensures that pie chart is circular
+plt.title('Proporção de Diretores Renomados e Não Renomados', fontsize=14, pad=20)  # Adiciona um padding
+
+# Organizar informações na legenda à esquerda
+plt.subplots_adjust(left=0.3)  # Aumenta o espaço à esquerda
+for i in range(len(resultado)):
+    plt.text(-1.5, 0.6 - (i * 0.15), 
+             f"{resultado['renomado'][i]}:\nMédia de Avaliação: {resultado['vote_average'][i]:.2f}\nQuantidade de Filmes: {resultado['quantidade'][i]}",
+             horizontalalignment='left', fontsize=10, bbox=dict(facecolor='white', alpha=0.8))
+
+plt.tight_layout()
 plt.show()
