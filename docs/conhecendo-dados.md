@@ -126,6 +126,7 @@ Os gráficos a seguir mostram diferentes relações entre variáveis como orçam
 Podemos observar algumas correlações claras, como entre orçamento e receita, e popularidade e número de votos. No entanto, as correlações entre rating e outras variáveis não são tão fortes, sugerindo que a qualidade percebida dos filmes não depende exclusivamente de fatores como orçamento ou popularidade. Há uma leve tendência de aumento no rating conforme o orçamento aumenta, mas não é uma relação clara ou muito forte. Isso sugere que um orçamento maior não garante, necessariamente, uma melhor avaliação. A maioria dos filmes com alta popularidade possui receitas mais elevadas, sugerindo que a popularidade contribui para o sucesso financeiro, mas há também uma boa dispersão, indicando que nem todos os filmes populares são altamente lucrativos. 
 
 ### Explorando campos qualitativos ###
+
 #### Hipótese: Diretores Renomados e Não Renomados ####
 
 Filmes dirigidos por diretores mais renomados tendem a receber notas mais altas?
@@ -137,6 +138,39 @@ Nessa hipótese separamos os diretores entre renomados que dirigiram dois ou mai
 A análise desses dados revela uma distinção clara entre diretores renomados e não renomados. Diretores renomados (aqueles que dirigiram dois ou mais filmes), representando 68,7% do total e correspondendo a 3298 filmes, com uma média de avaliação (vote_average) de 6,30. Em contrapartida, os diretores não renomados (aqueles que dirigiram apenas um filme), totalizando 31,3% e com 1505 filmes e uma média de avaliação de 5,64.
 
 Com isso conclui-se diretores renomados tendem a ter mais oportunidade dirigindo mais filmes e com uma ligeira diferença de 0,66 na média de avaliação sugerindo que os diretores renomados tendem a receber notas um pouco melhores em seus filmes. 
+
+Por curiosidade, buscamos também explorar os diretores com maior número de produções registradas e avaliar a correlação entre o número de produções e a média de notas:
+### 10 Diretores com Mais Filmes Publicados
+
+| Diretor            | Número de Filmes |
+|--------------------|------------------|
+| Steven Spielberg   | 27               |
+| Woody Allen        | 21               |
+| Clint Eastwood     | 20               |
+| Martin Scorsese    | 20               |
+| Spike Lee          | 16               |
+| Ridley Scott       | 16               |
+| Robert Rodriguez   | 16               |
+| Steven Soderbergh  | 15               |
+| Renny Harlin       | 15               |
+| Oliver Stone       | 14               |
+
+### Média de `vote_average` para Cada um dos 10 Diretores com Mais Filmes Publicados
+
+| Diretor            | Média de `vote_average` |
+|--------------------|--------------------------|
+| Martin Scorsese    | 7.295                    |
+| Steven Spielberg   | 6.974                    |
+| Clint Eastwood     | 6.865                    |
+| Ridley Scott       | 6.694                    |
+| Woody Allen        | 6.686                    |
+| Oliver Stone       | 6.614                    |
+| Spike Lee          | 6.456                    |
+| Steven Soderbergh  | 6.327                    |
+| Robert Rodriguez   | 5.875                    |
+| Renny Harlin       | 5.720                    |
+
+Correlação entre a quantidade de filmes e a média de votos dos diretores: 0.1677227626230727
 
 #### Hipótese: Diretores com Orçamento Acima da Média e suas Notas ####
 
