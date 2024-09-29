@@ -117,6 +117,19 @@ A análise desses dados revela uma distinção clara entre diretores renomados e
 
 Com isso conclui-se diretores renomados tendem a ter mais oportunidade dirigindo mais filmes e com uma ligeira diferença de 0,66 na média de avaliação sugerindo que os diretores renomados tendem a receber notas um pouco melhores em seus filmes. 
 
+### Hipótese: Diretores com Orçamento Acima da Média e suas Notas ###
+
+Diretores que trabalham com orçamentos acima da média tendem a receber notas mais altas em seus filmes?
+
+Nesta análise, examinamos a relação entre o orçamento dos filmes e suas respectivas médias de avaliação (vote_average), focando em diretores que trabalham com orçamentos superiores à média, que é de aproximadamente 19,17 milhões.
+
+![Orçamento e Votos](/docs/img/budget_media.png)
+
+A análise revelou que 706 diretores possuem orçamento acima da média, o que representa cerca de 30% do total de 2.349 diretores no dataset. A média de avaliação (vote_average) para os filmes dirigidos por esses diretores é de 6,19.
+
+Conclui-se que a relação entre orçamento e notas é positiva, embora existam filmes com altos orçamentos que não atingem avaliações excepcionais, produções com investimentos mais altos em produções cinematográficas podem levar a resultados mais favoráveis nas avaliações.
+
+
 ## Carregamento e Visualização Inicial dos Dados
 O dataset contém informações sobre filmes e séries, incluindo título, ano de lançamento, classificação indicativa, duração, gênero, avaliação, descrição, elenco e número de votos. As primeiras linhas do dataset foram visualizadas para entender a estrutura dos dados.
 ## Medidas de Tendência Central e Dispersão
