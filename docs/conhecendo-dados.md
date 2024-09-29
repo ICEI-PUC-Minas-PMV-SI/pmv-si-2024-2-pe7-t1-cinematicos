@@ -1,5 +1,5 @@
 # Conhecendo os dados
-A partir daqui, exploramos a base de dados do dataset utilizado, para compreender sua estrutura, detectar outliers e avaliar as relações entre as variáveis analisadas. As análises incluem medidas de tendência central, dispersão e visualizações gráficas.
+A partir daqui, exploramos a base de dados do dataset utilizado, para compreender sua estrutura, detectar outliers e avaliar as relações entre as variáveis analisadas. As análises incluem medidas de tendência central, correlação, dispersão, entre outras visualizações gráficas.
 
 O dataset possuí 24 colunas das quais estão dividas entre 6 colunas Quantitativas e 18 colunas Qualitativas.
 
@@ -35,7 +35,7 @@ Colunas Qualitativas:
 
 ### Estatísticas Descritivas ###
 
-A estátisca descritiva fornece uma visão geral dos dados, resumindo suas principais características:
+A estátistica descritiva fornece uma visão geral dos dados numéricos, resumindo suas principais características:
 
 | Estatística       | vote_average | vote_count  | budget          | popularity    | revenue         |
 |-------------------|--------------|-------------|------------------|---------------|------------------|
@@ -53,8 +53,8 @@ Contagem (count): Para todas as métricas possuindo 4803 registros.
 
 Média (mean): 
 - A média do vote_average é de aproximadamente 6.09, indicando que em média os filmes avaliados têm uma nota razoável.
-- O vote_count médio é 690.21, o que mostra que, em média, cada filme recebeu um número moderado de votos.
-- O budget médio seria de aproximadamente 29 milhões e a revenue média seria cerca de 82 milhões, indicando que os filmes geram uma receita significativamente maior que a receita usada em seu orçamento.
+- O vote_count médio é 690.21, o que mostra que, em média, cada filme recebeu um número moderado de votos. No entanto, os dados dos quartis demonstram que poucos filmes concentram grande quantidade de votos. 
+- O budget médio seria de aproximadamente 29 milhões e a revenue média seria cerca de 82 milhões, indicando que a média dos filmes geram uma receita significativamente maior que média da receita usada em seu orçamento.
 - A média de popularity é 21.49, mostrando uma grande variação entre os filmes.
 
 Desvio Padrão (std): 
@@ -77,11 +77,14 @@ Mínimo e Máximo:
 - **Moda Receita**: 0
 
 A moda do vote_average é 6.0, indicando que essa é a avaliação mais frequente entre os filmes.
-O vote_count tem uma moda de 0.0, sugerindo que muitos filmes não receberam votos, o que pode ser um indicador de que eles não foram amplamente divulgados ou vistos.
-A moda de popularidade mais comum é de 8.90, indicando que muitos filmes atingem esse nível de aceitação ou que poucos filmes se destacam significativamente.
-As modas para orçamento  e receita são 0, indicando que muitos filmes tiveram orçamentos baixos ou não geraram receita significativa.
+O vote_count tem uma moda de 0.0, sugerindo que muitos filmes não receberam votos, o que pode ser um indicador de que eles não foram amplamente divulgados ou vistos. Outra hipótese é que os dados estejam incompletos.
+A moda de popularidade é de 8.90, indicando que muitos filmes atingem esse nível de aceitação ou que poucos filmes se destacam significativamente.
+As modas para orçamento e receita são 0, indicando que muitos filmes tiveram orçamentos baixos, não geraram receita significativa ou que os dados estão incompletos.
 
 ### Quantidade de Valores 0 por Coluna ###
+
+Diante dos resultados descritos acima, se tornou evidente o fato do grande número de valores definidos como 0. Um levantamento foi realizado para avaliar mais a fundo o tamanho e o impacto desses casos no trabalho. 
+
 
 | Coluna         | Quantidade de Valores 0 |
 |----------------|-------------------------|
@@ -95,15 +98,15 @@ As modas para orçamento  e receita são 0, indicando que muitos filmes tiveram 
 | vote_count     | 62                      |
 
 
-Identificamos a presença de alguns valores iguais a 0, afetando principalmente vote_count, budget e revenue. Indicando que alguns filmes podem não ter sido suficientemente populares, ou seja, não receberam votos, não tiveram orçamento ou lucro, o que pode estar distorcendo as métricas. A presença de 1037 valores zero na coluna budget sugere que muitos filmes não têm orçamento definido, o que pode prejudicar a relação entre receita e custo de produção, levando a conclusões imprecisas sobre a viabilidade financeira. Da mesma forma, os 1427 zeros em revenue mostram que muitos filmes não geraram receita, o que pode afetar a média de receita e influenciar a análise sobre o sucesso dos filmes. Além disso, os 63 valores zero em vote_average e os 62 em vote_count revelam que alguns filmes não foram avaliados, podendo comprometer a análise de aceitação crítica e popular, podendo levar a métricas de avaliação não tão precisas.
+Identificamos a presença de alguns valores iguais a 0, afetando principalmente vote_count, budget e revenue. Indicando que alguns filmes podem não ter sido suficientemente populares, ou seja, não receberam votos, não tiveram orçamento ou lucro, o que pode estar distorcendo as métricas. A presença de 1037 valores zero na coluna budget sugere que muitos filmes não têm orçamento definido, o que pode prejudicar a relação entre receita e custo de produção, levando a conclusões imprecisas sobre a viabilidade financeira. Da mesma forma, os 1427 zeros em revenue mostram que muitos filmes não geraram receita, o que pode afetar a média de receita e influenciar a análise sobre o sucesso dos filmes. Além disso, os 63 valores zero em vote_average e os 62 em vote_count revelam que alguns filmes não foram avaliados, podendo comprometer a análise de aceitação crítica e popular, podendo levar a métricas de avaliação não tão precisas. No entanto, em todos esses casos, o que parece mais crível é a incompletude dos dados. Certamente, é mais plausível pensarmos em dados de orçamento e receita não computados do que imaginar um só filme realizado sem qualquer fonte de orçamento ou receita. Além disso, estes são dados que nem sempre são amplamente divulgados por produtores e distribuidores.  
 
 
 ### Mapa de Calor ###
 
 ![Mapa de calor](/docs/img/mapacalor.png)
 
-A análise do mapa de calor revelou padrões claros na correlação entre as variáveis budget, popularity, revenue, vote_average, e vote_count. Observamos uma forte correlação entre budget e revenue, sugerindo que filmes com maiores orçamentos tendem a gerar mais receita. A relação próxima entre vote_count e popularity, assim como com revenue, indica que filmes mais populares e de maior bilheteira atraem mais votos, conseguindo um lucro e engajamento de públicos maiores. 
-No entanto, a variável vote_average parece ter uma correlação mais fraca com as outras, especialmente em relação as colunas budget e revenue. Essa fraqueza indica que a média de avaliações não é diretamente influenciada por orçamentos elevados ou receitas substanciais. Filmes com maior avaliação, muitas vezes, podem ser produções de menor escala ou de nicho que conquistaram o público por sua qualidade, enredo ou performances, desafiando a noção de que um grande orçamento é sinônimo de uma alta avaliação. Assim, o mapa de calor destaca uma descoberta crucial: enquanto os investimentos financeiros e a popularidade podem gerar receita, a qualidade percebida e o engajamento do público em relação à avaliação média podem depender de fatores mais subjetivos, como a autenticidade da narrativa e a profundidade emocional do filme.
+A análise do mapa de calor revelou padrões claros na correlação entre as variáveis budget, popularity, revenue, vote_average, e vote_count. Observamos uma forte correlação entre budget e revenue, sugerindo que filmes com maiores orçamentos tendem a gerar mais receita. A relação próxima entre vote_count e popularity, assim como com revenue, indica que filmes mais populares e de maior bilheteira atraem mais votos, conseguindo o engajamento de públicos maiores. No entanto, a variável vote_average parece ter uma correlação mais fraca com as outras, especialmente em relação as colunas budget e revenue. Essa fraqueza indica que a média de avaliações não é diretamente influenciada por orçamentos elevados ou receitas substanciais. Filmes com maior avaliação, muitas vezes, podem ser produções de menor escala ou de nicho que conquistaram o público por sua qualidade, enredo ou performances, desafiando a noção de que um grande orçamento é sinônimo de uma alta avaliação. Assim, o mapa de calor sugere que,enquanto os investimentos financeiros e a popularidade podem gerar receita, a qualidade percebida e o engajamento do público em relação à avaliação média podem depender de fatores mais subjetivos. Certamente esperávamos encontrar maior correlação entre o vote_average e outros parâmetros, o que pode inviabilizar uma eventual inferência do vote_average a partir de outros campos. 
+
 
 ### Hipótese: Diretores Renomados e Não Renomados ###
 
