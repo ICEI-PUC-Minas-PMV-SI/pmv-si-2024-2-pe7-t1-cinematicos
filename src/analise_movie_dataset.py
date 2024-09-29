@@ -1,6 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import numpy as np 
 
 df = pd.read_csv('src/movie_dataset.csv', encoding='utf-8')
 
@@ -232,45 +233,94 @@ df = pd.read_csv('src/movie_dataset.csv', encoding='utf-8')
 
 # plt.show()
 
-############################# GRÁFICO DE HIPOTESE PARA DIRETORES RENOMADOS E NÃO RENOMADOS #############################
+# ############################# GRÁFICO DE HIPOTESE PARA DIRETORES RENOMADOS E NÃO RENOMADOS #############################
 
 
-# Criar uma coluna para contar o número de filmes por diretor
-df['director_count'] = df.groupby('director')['director'].transform('count')
+# # Criar uma coluna para contar o número de filmes por diretor
+# df['director_count'] = df.groupby('director')['director'].transform('count')
 
-# Classificar diretores em renomados e não renomados
-df['renomado'] = df['director_count'].apply(lambda x: 'Renomado' if x >= 2 else 'Não Renomado')
+# # Classificar diretores em renomados e não renomados
+# df['renomado'] = df['director_count'].apply(lambda x: 'Renomado' if x >= 2 else 'Não Renomado')
 
-# Calcular a média de vote_average por grupo
-media_por_grupo = df.groupby('renomado')['vote_average'].mean().reset_index()
+# # Calcular a média de vote_average por grupo
+# media_por_grupo = df.groupby('renomado')['vote_average'].mean().reset_index()
 
-# Contar a quantidade de filmes por grupo
-quantidade_por_grupo = df['renomado'].value_counts().reset_index()
-quantidade_por_grupo.columns = ['renomado', 'quantidade']
+# # Contar a quantidade de filmes por grupo
+# quantidade_por_grupo = df['renomado'].value_counts().reset_index()
+# quantidade_por_grupo.columns = ['renomado', 'quantidade']
 
-# Unir as informações de média e quantidade
-resultado = pd.merge(quantidade_por_grupo, media_por_grupo, on='renomado')
+# # Unir as informações de média e quantidade
+# resultado = pd.merge(quantidade_por_grupo, media_por_grupo, on='renomado')
 
-# Criar o gráfico de rosca
-plt.figure(figsize=(8, 6))  # Tamanho do gráfico menor
-# Alterar as cores para azul claro e azul menos claro
-plt.pie(resultado['quantidade'], labels=resultado['renomado'], autopct='%1.1f%%', startangle=140, colors=['#ADD8E6', '#4682B4'])
+# # Criar o gráfico de rosca
+# plt.figure(figsize=(8, 6))  # Tamanho do gráfico menor
+# # Alterar as cores para azul claro e azul menos claro
+# plt.pie(resultado['quantidade'], labels=resultado['renomado'], autopct='%1.1f%%', startangle=140, colors=['#ADD8E6', '#4682B4'])
 
-# Criar um círculo branco no meio para formar um gráfico de rosca
-centre_circle = plt.Circle((0, 0), 0.70, fc='white')
-fig = plt.gcf()
-fig.gca().add_artist(centre_circle)
+# # Criar um círculo branco no meio para formar um gráfico de rosca
+# centre_circle = plt.Circle((0, 0), 0.70, fc='white')
+# fig = plt.gcf()
+# fig.gca().add_artist(centre_circle)
 
-# Adicionar detalhes no gráfico
-plt.axis('equal')  # Equal aspect ratio ensures that pie chart is circular
-plt.title('Proporção de Diretores Renomados e Não Renomados', fontsize=14, pad=20)  # Adiciona um padding
+# # Adicionar detalhes no gráfico
+# plt.axis('equal')  # Equal aspect ratio ensures that pie chart is circular
+# plt.title('Proporção de Diretores Renomados e Não Renomados', fontsize=14, pad=20)  # Adiciona um padding
 
-# Organizar informações na legenda à esquerda
-plt.subplots_adjust(left=0.3)  # Aumenta o espaço à esquerda
-for i in range(len(resultado)):
-    plt.text(-1.5, 0.6 - (i * 0.15), 
-             f"{resultado['renomado'][i]}:\nMédia de Avaliação: {resultado['vote_average'][i]:.2f}\nQuantidade de Filmes: {resultado['quantidade'][i]}",
-             horizontalalignment='left', fontsize=10, bbox=dict(facecolor='white', alpha=0.8))
+# # Organizar informações na legenda à esquerda
+# plt.subplots_adjust(left=0.3)  # Aumenta o espaço à esquerda
+# for i in range(len(resultado)):
+#     plt.text(-1.5, 0.6 - (i * 0.15), 
+#              f"{resultado['renomado'][i]}:\nMédia de Avaliação: {resultado['vote_average'][i]:.2f}\nQuantidade de Filmes: {resultado['quantidade'][i]}",
+#              horizontalalignment='left', fontsize=10, bbox=dict(facecolor='white', alpha=0.8))
 
+# plt.tight_layout()
+# plt.show()
+
+# # ############################# GRÁFICO DE DISPERÇÃO PARA HIPÓTESES DE ORÇAMENTO COM DIRETORES #############################
+
+# Calcular a média do orçamento
+media_budget = df['budget'].mean()
+
+# Filtrar filmes com orçamento acima da média
+df_filtrado = df[df['budget'] > media_budget]
+
+# Calcular quantos diretores têm orçamento acima da média e a média das notas
+num_diretores = df_filtrado['director'].nunique()
+media_notas = df_filtrado['vote_average'].mean()
+
+# Criar o gráfico de dispersão
+plt.figure(figsize=(12, 8))
+scatter = plt.scatter(df_filtrado['budget'], df_filtrado['vote_average'], 
+                      c=df_filtrado['vote_average'], cmap='viridis', alpha=0.7, edgecolors='w')
+
+# Adicionar uma barra de cores
+cbar = plt.colorbar(scatter)
+cbar.set_label('Média de Avaliação', rotation=270, labelpad=15)
+
+# Adicionar título e rótulos
+plt.title('Relação entre Orçamento e Média de Avaliação dos Filmes\n(Diretores com Orçamento Acima da Média)', fontsize=16)
+plt.xlabel('Orçamento (em milhões)', fontsize=14)
+plt.ylabel('Média de Avaliação (vote_average)', fontsize=14)
+
+# Definir limites para o eixo x
+min_budget = media_budget
+max_budget = df['budget'].max()
+
+# Valores a serem exibidos
+budget_values = np.linspace(min_budget, max_budget, num=7)
+
+# Adicionar orçamentos na parte inferior do gráfico
+for budget in budget_values:
+    plt.text(budget, -0.5, f"{int(budget / 1e6)}M", 
+             fontsize=10, horizontalalignment='center')
+
+# Adicionar informações sobre diretores e média das notas na parte inferior
+plt.figtext(0.5, 0.01, f"Número de Diretores: {num_diretores}   |   Média das Notas: {media_notas:.2f}",
+            fontsize=12, ha='center', va='bottom', bbox=dict(facecolor='white', alpha=0.5, boxstyle='round,pad=0.5'))
+
+# Melhorar a visualização do eixo x
+plt.xscale('linear')  # Usar escala linear para melhor visualização
+plt.grid(True)
 plt.tight_layout()
+plt.ylim(-1, 10)  # Limita o eixo y para melhorar a visualização
 plt.show()
