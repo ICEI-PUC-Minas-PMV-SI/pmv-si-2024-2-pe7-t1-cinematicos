@@ -152,31 +152,31 @@ Conclui-se que a relação entre orçamento e notas é positiva, embora existam 
 
 ## Descrição dos achados
 
-###Estatísticas Descritivas###
+### Estatísticas Descritivas ###
 
 - Avaliações (vote_average): A média é 6.09, indicando avaliações razoáveis em geral. A moda é 6.0, o valor mais frequente.
 - Votos (vote_count): A média é de 690 votos, mas o desvio padrão é alto (1234.59), sugerindo grande variabilidade.
 - Orçamento (budget) e Receita (revenue): Médias de 29 milhões e 82 milhões, respectivamente, com altos desvios padrão, mostrando ampla disparidade entre filmes.
 - Muitos valores zero: Grande número de zeros em colunas como budget e revenue, sugerindo que dados estão ausentes ou não foram informados. Esses zeros afetam negativamente a análise.
 
-####Distribuição dos Dados e Visualizações Gráficas####
+#### Distribuição dos Dados e Visualizações Gráficas ####
 
 - Box plots e gráficos de dispersão indicam que:
 - Filmes com altos orçamentos tendem a gerar maiores receitas.
 - A popularidade e o número de votos também estão relacionados positivamente.
 - Avaliações (vote_average) não apresentam forte correlação com outras variáveis, sugerindo que a qualidade percebida não depende exclusivamente de orçamento ou popularidade.
 
-###Correlações###
+### Correlações ###
 
 - Mapa de calor indica forte correlação entre orçamento e receita, bem como entre popularidade e número de votos.
 - A correlação fraca entre avaliações e outras variáveis sugere que a qualidade percebida depende de fatores subjetivos e não apenas de investimentos financeiros.
 
-###Análises das Hipóteses Qualitativas###
+### Análises das Hipóteses Qualitativas ###
 
 - Diretores renomados: Diretores com mais de um filme tendem a obter avaliações ligeiramente melhores (média de 6.30) em comparação aos diretores de um único filme (média de 5.64).
 - Orçamento acima da média: Diretores que trabalham com orçamentos acima da média (19,17 milhões) tendem a ter melhores avaliações (média de 6.19), embora a relação entre orçamento e avaliação não seja determinante.
 
-###Observações Gerais###
+### Observações Gerais ###
 
 Os dados com valores nulos ou 0 precisam ser tratados para melhorar a qualidade dos resultados. Outra coisa observada foram casos de filmes com pouquissimos votos(vote_count) o que resulta em pouca fidelidade quanto ao valor de 'vote_average'. Há um caso, por exemplo, de filme com apenas um voto e a nota é 10. Sem uma decisão sobre esses casos excepcionais, os demais resultados podem se tornar imprecisos.  
 
