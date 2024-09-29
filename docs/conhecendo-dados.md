@@ -90,14 +90,6 @@ Os gráficos a seguir ilustram os parâmetros de estatística básica relatados 
 ![Gráfico de Distribuição 1](/docs/img/graf_distribuicao1.png)
 ![Gráfico de Distribuição 2](/docs/img/graf_distribuicao2.png)
 
-### Dispersão ###
-
-Os gráficos a seguir mostram diferentes relações entre variáveis como orçamento, receita, popularidade, votos e rating:
-
-![Grafícos de Dispersão](/docs/img/graf_dispersão.png)
-
-Podemos observar algumas correlações claras, como entre orçamento e receita, e popularidade e número de votos. No entanto, as correlações entre rating e outras variáveis não são tão fortes, sugerindo que a qualidade percebida dos filmes não depende exclusivamente de fatores como orçamento ou popularidade. Há uma leve tendência de aumento no rating conforme o orçamento aumenta, mas não é uma relação clara ou muito forte. Isso sugere que um orçamento maior não garante, necessariamente, uma melhor avaliação. A maioria dos filmes com alta popularidade possui receitas mais elevadas, sugerindo que a popularidade contribui para o sucesso financeiro, mas há também uma boa dispersão, indicando que nem todos os filmes populares são altamente lucrativos. 
-
 ### Quantidade de Valores 0 por Coluna ###
 
 Diante dos resultados descritos acima, se tornou evidente o fato do grande número de valores definidos como 0. Um levantamento foi realizado para avaliar mais a fundo o tamanho e o impacto desses casos no trabalho. 
@@ -118,14 +110,23 @@ Diante dos resultados descritos acima, se tornou evidente o fato do grande núme
 Identificamos a presença de alguns valores iguais a 0, afetando principalmente vote_count, budget e revenue. Indicando que alguns filmes podem não ter sido suficientemente populares, ou seja, não receberam votos, não tiveram orçamento ou lucro, o que pode estar distorcendo as métricas. A presença de 1037 valores zero na coluna budget sugere que muitos filmes não têm orçamento definido, o que pode prejudicar a relação entre receita e custo de produção, levando a conclusões imprecisas sobre a viabilidade financeira. Da mesma forma, os 1427 zeros em revenue mostram que muitos filmes não geraram receita, o que pode afetar a média de receita e influenciar a análise sobre o sucesso dos filmes. Além disso, os 63 valores zero em vote_average e os 62 em vote_count revelam que alguns filmes não foram avaliados, podendo comprometer a análise de aceitação crítica e popular, podendo levar a métricas de avaliação não tão precisas. No entanto, em todos esses casos, o que parece mais crível é a incompletude dos dados. Certamente, é mais plausível pensarmos em dados de orçamento e receita não computados do que imaginar um só filme realizado sem qualquer fonte de orçamento ou receita. Além disso, estes são dados que nem sempre são amplamente divulgados por produtores e distribuidores.  
 
 
-### Mapa de Calor ###
+
+### Correlações: mapa de calor ###
 
 ![Mapa de calor](/docs/img/mapacalor.png)
 
 A análise do mapa de calor revelou padrões claros na correlação entre as variáveis budget, popularity, revenue, vote_average, e vote_count. Observamos uma forte correlação entre budget e revenue, sugerindo que filmes com maiores orçamentos tendem a gerar mais receita. A relação próxima entre vote_count e popularity, assim como com revenue, indica que filmes mais populares e de maior bilheteira atraem mais votos, conseguindo o engajamento de públicos maiores. No entanto, a variável vote_average parece ter uma correlação mais fraca com as outras, especialmente em relação as colunas budget e revenue. Essa fraqueza indica que a média de avaliações não é diretamente influenciada por orçamentos elevados ou receitas substanciais. Filmes com maior avaliação, muitas vezes, podem ser produções de menor escala ou de nicho que conquistaram o público por sua qualidade, enredo ou performances, desafiando a noção de que um grande orçamento é sinônimo de uma alta avaliação. Assim, o mapa de calor sugere que,enquanto os investimentos financeiros e a popularidade podem gerar receita, a qualidade percebida e o engajamento do público em relação à avaliação média podem depender de fatores mais subjetivos. Certamente esperávamos encontrar maior correlação entre o vote_average e outros parâmetros, o que pode inviabilizar uma eventual inferência do vote_average a partir de outros campos. 
 
+### Dispersão ###
 
-### Hipótese: Diretores Renomados e Não Renomados ###
+Os gráficos a seguir mostram diferentes relações entre variáveis como orçamento, receita, popularidade, votos e rating:
+
+![Grafícos de Dispersão](/docs/img/graf_dispersão.png)
+
+Podemos observar algumas correlações claras, como entre orçamento e receita, e popularidade e número de votos. No entanto, as correlações entre rating e outras variáveis não são tão fortes, sugerindo que a qualidade percebida dos filmes não depende exclusivamente de fatores como orçamento ou popularidade. Há uma leve tendência de aumento no rating conforme o orçamento aumenta, mas não é uma relação clara ou muito forte. Isso sugere que um orçamento maior não garante, necessariamente, uma melhor avaliação. A maioria dos filmes com alta popularidade possui receitas mais elevadas, sugerindo que a popularidade contribui para o sucesso financeiro, mas há também uma boa dispersão, indicando que nem todos os filmes populares são altamente lucrativos. 
+
+### Explorando campos qualitativos ###
+#### Hipótese: Diretores Renomados e Não Renomados ####
 
 Filmes dirigidos por diretores mais renomados tendem a receber notas mais altas?
 
@@ -137,7 +138,7 @@ A análise desses dados revela uma distinção clara entre diretores renomados e
 
 Com isso conclui-se diretores renomados tendem a ter mais oportunidade dirigindo mais filmes e com uma ligeira diferença de 0,66 na média de avaliação sugerindo que os diretores renomados tendem a receber notas um pouco melhores em seus filmes. 
 
-### Hipótese: Diretores com Orçamento Acima da Média e suas Notas ###
+#### Hipótese: Diretores com Orçamento Acima da Média e suas Notas ####
 
 Diretores que trabalham com orçamentos acima da média tendem a receber notas mais altas em seus filmes?
 
@@ -149,64 +150,44 @@ A análise revelou que 706 diretores possuem orçamento acima da média, o que r
 
 Conclui-se que a relação entre orçamento e notas é positiva, embora existam filmes com altos orçamentos que não atingem avaliações excepcionais, produções com investimentos mais altos em produções cinematográficas podem levar a resultados mais favoráveis nas avaliações.
 
-
-## Carregamento e Visualização Inicial dos Dados
-O dataset contém informações sobre filmes e séries, incluindo título, ano de lançamento, classificação indicativa, duração, gênero, avaliação, descrição, elenco e número de votos. As primeiras linhas do dataset foram visualizadas para entender a estrutura dos dados.
-## Medidas de Tendência Central e Dispersão
-As colunas numéricas rating e votes foram analisadas para calcular medidas de tendência central e dispersão.
-A tabela a seguir resume as medidas calculadas:
->>>>img.metrics1
-## Visualização Gráfica
-Para visualizar a distribuição dos dados, foram criados histogramas e box plots para as variáveis rating e votes.
->>>img.rating_votes
-
-Análise Gráfica:
-1. Distribuição de Ratings:
-- A maioria dos filmes tem avaliações entre 5 e 9.
-- A distribuição é levemente assimétrica à esquerda, com concentração maior em torno de 7.
-2. Distribuição de Votos:
-- A maioria dos filmes tem menos de 10.000 votos.
-- A escala logarítmica mostra que há alguns filmes com um número muito alto de votos (cauda longa).
-
-Medidas de Correlação
-  Para entender a relação entre as variáveis, foi criada uma matriz de correlação entre rating e votes.
-
-Análise de Correlação:
-- A correlação entre rating e votes é de aproximadamente 0.24, indicando uma correlação positiva fraca. Ou seja, filmes com mais votos tendem a ter uma avaliação ligeiramente mais alta, mas a relação não é forte.
-- O gráfico de dispersão mostra uma dispersão ampla, com filmes populares (muitos votos) não necessariamente recebendo avaliações muito altas.
-
 ## Descrição dos achados
-A análise descritiva e exploratória revelou vários insights importantes:
-### Centralidade dos Dados:
-- A maioria dos filmes e séries tem avaliações entre 6 e 8.
-- A mediana de votos é 1.187, mostrando que metade dos filmes tem menos de 1.187 votos.
-### Variabilidade dos Dados:
-- A dispersão dos votos é muito alta, com um desvio padrão grande. Isto indica a presença de filmes com muitos votos que podem influenciar a análise.
-- O desvio padrão do rating é mais contido, sugerindo uma distribuição mais consistente das avaliações.
-### Correlação entre os Atributos:
-- A correlação entre rating e votes é fraca (0.24), indicando que o número de votos influencia pouco a avaliação geral do filme.
-- Os outliers identificados no número de votos (filmes com muitos votos) destacam a variabilidade no sucesso popular dos filmes.
 
-## Ferramentas
+###Estatísticas Descritivas###
+
+- Avaliações (vote_average): A média é 6.09, indicando avaliações razoáveis em geral. A moda é 6.0, o valor mais frequente.
+- Votos (vote_count): A média é de 690 votos, mas o desvio padrão é alto (1234.59), sugerindo grande variabilidade.
+- Orçamento (budget) e Receita (revenue): Médias de 29 milhões e 82 milhões, respectivamente, com altos desvios padrão, mostrando ampla disparidade entre filmes.
+- Muitos valores zero: Grande número de zeros em colunas como budget e revenue, sugerindo que dados estão ausentes ou não foram informados. Esses zeros afetam negativamente a análise.
+
+####Distribuição dos Dados e Visualizações Gráficas####
+
+- Box plots e gráficos de dispersão indicam que:
+- Filmes com altos orçamentos tendem a gerar maiores receitas.
+- A popularidade e o número de votos também estão relacionados positivamente.
+- Avaliações (vote_average) não apresentam forte correlação com outras variáveis, sugerindo que a qualidade percebida não depende exclusivamente de orçamento ou popularidade.
+
+###Correlações###
+
+- Mapa de calor indica forte correlação entre orçamento e receita, bem como entre popularidade e número de votos.
+- A correlação fraca entre avaliações e outras variáveis sugere que a qualidade percebida depende de fatores subjetivos e não apenas de investimentos financeiros.
+
+###Análises das Hipóteses Qualitativas###
+
+- Diretores renomados: Diretores com mais de um filme tendem a obter avaliações ligeiramente melhores (média de 6.30) em comparação aos diretores de um único filme (média de 5.64).
+- Orçamento acima da média: Diretores que trabalham com orçamentos acima da média (19,17 milhões) tendem a ter melhores avaliações (média de 6.19), embora a relação entre orçamento e avaliação não seja determinante.
+
+###Observações Gerais###
+
+Os dados com valores nulos ou 0 precisam ser tratados para melhorar a qualidade dos resultados. Outra coisa observada foram casos de filmes com pouquissimos votos(vote_count) o que resulta em pouca fidelidade quanto ao valor de 'vote_average'. Há um caso, por exemplo, de filme com apenas um voto e a nota é 10. Sem uma decisão sobre esses casos excepcionais, os demais resultados podem se tornar imprecisos.  
+
+- A presença de muitos valores nulos ou zeros (especialmente em budget, revenue e vote_count) precisa ser tratada para evitar distorções nos resultados.
+- Casos de filmes com pouquíssimos votos (por exemplo, um voto com nota 10) podem influenciar a média de avaliação e comprometer a qualidade da análise. É necessário estabelecer critérios para lidar com esses casos.
+
+Nossa análise exploratória revela que, enquanto fatores financeiros e popularidade contribuem para o sucesso dos filmes, a percepção de qualidade depende de aspectos mais subjetivos. Há correlações razoavelmente fortes, no entanto elas não incluem o vote_average, dificultando seu uso para inferência do vote_average por meio de outros parâmetros. 
+
+Ferramentas
 A maior parte das análises foi realizada utilizando a linguagem de programação Python, com as bibliotecas:
 
 Pandas: Para manipulação e análise de dados.
 Seaborn e Matplotlib: Para visualização dos dados e criação de gráficos.
-Jupyter Notebook: Para desenvolvimento iterativo de códigos e visualização das análises.
 
->>>>> modelo para apagar depois <<<<<<<
-# Conhecendo os dados
-
-Nesta seção, deverá ser registrada uma detalhada análise descritiva e exploratória sobre a base de dados selecionada na Etapa 1 com o objetivo de compreender a estrutura dos dados, detectar eventuais _outliers_ e também, avaliar/detectar as relações existentes entre as variáveis analisadas.
-
-Para isso, sugere-se que sejam utilizados cálculos de medidas de tendência central, como média, mediana e moda, para entender a centralidade dos dados; sejam exploradas medidas de dispersão como desvio padrão e intervalos interquartil para avaliar a variabilidade dos dados; sejam utilizados gráficos descritivos como histogramas e box plots, para representar visualmente as características essenciais dos dados, pois essas visualizações podem facilitar a identificação de padrões e anomalias; sejam analisadas as relações entre as variáveis por meio de análise de correlação, gráficos de dispersões, mapas de calor, entre outras técnicas. 
-
-Inclua nesta seção, gráficos, tabelas e demais artefatos que você considere relevantes para entender os dados com os quais você irá trabalhar.  Além disso, inclua e comente os trechos de código mais relevantes desenvolvidos para realizar suas análises. Na pasta "src", inclua o código fonte completo.
-
-## Descrição dos achados
-
-A partir da análise descrita e exploratória realizada, descreva todos os achados considerados relevantes para o contexto em que o trabalho se insere. Por exemplo: com relação à centralidade dos dados algo chamou a atenção? Foi possível identificar correlação entre os atributos? Que tipo de correlação (forte, fraca, moderada)? 
-
-## Ferramentas utilizadas
-
-Existem muitas ferramentas diferentes que podem ser utilizadas para fazer a análise dos dados. Nesta seção, descreva as ferramentas/tecnologias utilizadas e sua aplicação. Vale destacar que, preferencialmente, as análises deverão ser realizadas utilizando a linguagem de programação Python.
