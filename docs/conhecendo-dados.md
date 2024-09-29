@@ -140,7 +140,8 @@ A análise desses dados revela uma distinção clara entre diretores renomados e
 Com isso conclui-se diretores renomados tendem a ter mais oportunidade dirigindo mais filmes e com uma ligeira diferença de 0,66 na média de avaliação sugerindo que os diretores renomados tendem a receber notas um pouco melhores em seus filmes. 
 
 Por curiosidade, buscamos também explorar os diretores com maior número de produções registradas e avaliar a correlação entre o número de produções e a média de notas:
-### 10 Diretores com Mais Filmes Publicados
+
+##### 10 Diretores com Mais Filmes Publicados
 
 | Diretor            | Número de Filmes |
 |--------------------|------------------|
@@ -155,7 +156,7 @@ Por curiosidade, buscamos também explorar os diretores com maior número de pro
 | Renny Harlin       | 15               |
 | Oliver Stone       | 14               |
 
-### Média de `vote_average` para Cada um dos 10 Diretores com Mais Filmes Publicados
+#### Média de `vote_average` para Cada um dos 10 Diretores com Mais Filmes Publicados
 
 | Diretor            | Média de `vote_average` |
 |--------------------|--------------------------|
@@ -170,7 +171,7 @@ Por curiosidade, buscamos também explorar os diretores com maior número de pro
 | Robert Rodriguez   | 5.875                    |
 | Renny Harlin       | 5.720                    |
 
-Correlação entre a quantidade de filmes e a média de votos dos diretores: 0.1677227626230727
+*Correlação entre a quantidade de filmes e a média de votos dos diretores: 0.1677227626230727
 
 #### Hipótese: Diretores com Orçamento Acima da Média e suas Notas ####
 
