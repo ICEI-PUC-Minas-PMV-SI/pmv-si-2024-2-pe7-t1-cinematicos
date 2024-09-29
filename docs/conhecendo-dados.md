@@ -105,6 +105,17 @@ Identificamos a presença de alguns valores iguais a 0, afetando principalmente 
 A análise do mapa de calor revelou padrões claros na correlação entre as variáveis budget, popularity, revenue, vote_average, e vote_count. Observamos uma forte correlação entre budget e revenue, sugerindo que filmes com maiores orçamentos tendem a gerar mais receita. A relação próxima entre vote_count e popularity, assim como com revenue, indica que filmes mais populares e de maior bilheteira atraem mais votos, conseguindo um lucro e engajamento de públicos maiores. 
 No entanto, a variável vote_average parece ter uma correlação mais fraca com as outras, especialmente em relação as colunas budget e revenue. Essa fraqueza indica que a média de avaliações não é diretamente influenciada por orçamentos elevados ou receitas substanciais. Filmes com maior avaliação, muitas vezes, podem ser produções de menor escala ou de nicho que conquistaram o público por sua qualidade, enredo ou performances, desafiando a noção de que um grande orçamento é sinônimo de uma alta avaliação. Assim, o mapa de calor destaca uma descoberta crucial: enquanto os investimentos financeiros e a popularidade podem gerar receita, a qualidade percebida e o engajamento do público em relação à avaliação média podem depender de fatores mais subjetivos, como a autenticidade da narrativa e a profundidade emocional do filme.
 
+### Hipótese: Diretores Renomados e Não Renomados ###
+
+Filmes dirigidos por diretores mais renomados tendem a receber notas mais altas?
+
+Nessa hipótese separamos os diretores entre renomados que dirigiram dois ou mais filmes e não renomados com somente 1 filme e vamos comparar a média de votos (vote_average) entre esses diretores. 
+
+![Diretores](/docs/img/diretores_grafico.png)
+
+A análise desses dados revela uma distinção clara entre diretores renomados e não renomados. Diretores renomados (aqueles que dirigiram dois ou mais filmes), representando 68,7% do total e correspondendo a 3298 filmes, com uma média de avaliação (vote_average) de 6,30. Em contrapartida, os diretores não renomados (aqueles que dirigiram apenas um filme), totalizando 31,3% e com 1505 filmes e uma média de avaliação de 5,64.
+
+Com isso conclui-se diretores renomados tendem a ter mais oportunidade dirigindo mais filmes e com uma ligeira diferença de 0,66 na média de avaliação sugerindo que os diretores renomados tendem a receber notas um pouco melhores em seus filmes. 
 
 ## Carregamento e Visualização Inicial dos Dados
 O dataset contém informações sobre filmes e séries, incluindo título, ano de lançamento, classificação indicativa, duração, gênero, avaliação, descrição, elenco e número de votos. As primeiras linhas do dataset foram visualizadas para entender a estrutura dos dados.
