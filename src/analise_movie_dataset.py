@@ -232,13 +232,8 @@ df = pd.read_csv('src/movie_dataset.csv', encoding='utf-8')
 
 # plt.show()
 
-############################# Teste #############################
+############################# GRÁFICO DE HIPOTESE PARA DIRETORES RENOMADOS E NÃO RENOMADOS #############################
 
-import pandas as pd
-import matplotlib.pyplot as plt
-
-# Carregar o dataset
-df = pd.read_csv('src/movie_dataset.csv', encoding='utf-8')
 
 # Criar uma coluna para contar o número de filmes por diretor
 df['director_count'] = df.groupby('director')['director'].transform('count')
