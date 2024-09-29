@@ -324,3 +324,37 @@ plt.grid(True)
 plt.tight_layout()
 plt.ylim(-1, 10)  # Limita o eixo y para melhorar a visualização
 plt.show()
+
+####### TOP 10 Diretores com mais filmes lançados e suas médias de notas
+
+diretores_mais_filmes = df['director'].value_counts().head(10)
+print("10 diretores com mais filmes publicados:")
+print(diretores_mais_filmes)
+
+diretores_mais_filmes_lista = diretores_mais_filmes.index
+
+df_filtrado = df[df['director'].isin(diretores_mais_filmes_lista)]
+
+df_filtrado = df_filtrado.dropna(subset=['vote_average'])
+
+media_votos_por_diretor = df_filtrado.groupby('director')['vote_average'].mean()
+
+media_votos_por_diretor = media_votos_por_diretor.sort_values(ascending=False)
+
+print("\nMédia de 'vote_average' para cada um dos 10 diretores com mais filmes publicados:")
+print(media_votos_por_diretor)
+
+
+######### Correlação entre a quantidade de filmes e a média de votos dos diretores
+
+quantidade_filmes = df['director'].value_counts().reset_index()
+quantidade_filmes.columns = ['director', 'quantidade_filmes']
+
+media_votos = df.groupby('director')['vote_average'].mean().reset_index()
+media_votos.columns = ['director', 'media_votos']
+
+df_diretores = pd.merge(quantidade_filmes, media_votos, on='director')
+
+correlacao = df_diretores['quantidade_filmes'].corr(df_diretores['media_votos'])
+
+print("Correlação entre a quantidade de filmes e a média de votos dos diretores:", correlacao)
