@@ -148,7 +148,7 @@ Nesta análise, examinamos a relação entre o orçamento dos filmes e suas resp
 
 A análise revelou que 706 diretores possuem orçamento acima da média, o que representa cerca de 30% do total de 2.349 diretores no dataset. A média de avaliação (vote_average) para os filmes dirigidos por esses diretores é de 6,19.
 
-Conclui-se que a relação entre orçamento e notas é positiva, embora existam filmes com altos orçamentos que não atingem avaliações excepcionais, produções com investimentos mais altos em produções cinematográficas podem levar a resultados mais favoráveis nas avaliações.
+Podemos pensar que a relação entre orçamento e notas é positiva, embora existam filmes com altos orçamentos que não atingem avaliações excepcionais, produções com investimentos mais altos em produções cinematográficas podem levar a resultados mais favoráveis nas avaliações.
 
 ## Descrição dos achados
 
@@ -174,7 +174,7 @@ Conclui-se que a relação entre orçamento e notas é positiva, embora existam 
 ### Análises das Hipóteses Qualitativas ###
 
 - Diretores renomados: Diretores com mais de um filme tendem a obter avaliações ligeiramente melhores (média de 6.30) em comparação aos diretores de um único filme (média de 5.64).
-- Orçamento acima da média: Diretores que trabalham com orçamentos acima da média (19,17 milhões) tendem a ter melhores avaliações (média de 6.19), embora a relação entre orçamento e avaliação não seja determinante.
+- Orçamento acima da média: Diretores que trabalham com orçamentos acima da média (19,17 milhões) tendem a ter avaliações ligeiramente melhores (média de 6.19), embora a relação entre orçamento e avaliação não seja determinante.
 
 ### Observações Gerais ###
 
