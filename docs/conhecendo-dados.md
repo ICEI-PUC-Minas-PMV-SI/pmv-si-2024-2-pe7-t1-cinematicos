@@ -223,6 +223,6 @@ Nossa análise exploratória revela que, enquanto fatores financeiros e populari
 ## Ferramentas
 A maior parte das análises foi realizada utilizando a linguagem de programação Python, com as bibliotecas:
 
-Pandas: Para manipulação e análise de dados.
-Seaborn e Matplotlib: Para visualização dos dados e criação de gráficos.
+- Pandas: Para manipulação e análise de dados.
+- Seaborn e Matplotlib: Para visualização dos dados e criação de gráficos.
 
