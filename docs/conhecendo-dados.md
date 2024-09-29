@@ -171,7 +171,7 @@ Por curiosidade, buscamos também explorar os diretores com maior número de pro
 | Robert Rodriguez   | 5.875                    |
 | Renny Harlin       | 5.720                    |
 
-*Correlação entre a quantidade de filmes e a média de votos dos diretores: 0.1677227626230727
+* Correlação entre a quantidade de filmes e a média de votos dos diretores: 0.1677227626230727
 
 #### Hipótese: Diretores com Orçamento Acima da Média e suas Notas ####
 
