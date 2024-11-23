@@ -76,21 +76,33 @@ A RNA foi escolhida devido à complexidade do problema, que envolve dados contí
 
 # Avaliação dos modelos criados
 
-## **1.Avaliação do Modelo RNA**
+## **1. Modelo RNA**
 
 ### **Métricas Utilizadas**
 
-- **Erro Quadrático Médio (MSE):**
-  - Justificativa: Mede o desvio médio ao quadrado entre os valores reais e previstos, destacando erros maiores.
-- **Erro Absoluto Médio (MAE):**
-  - Justificativa: Fornece uma medida mais interpretável, representando o erro médio em termos absolutos.
-- **Coeficiente de Determinação (R²):**
-  - Justificativa: Avalia a proporção da variância explicada pelo modelo, sendo uma métrica padrão para regressão.
+#### **Erro Quadrático Médio (MSE)**
+- **Resultado Obtido:** 0.3396  
+- **Interpretação:**  
+  O MSE avalia o desvio médio ao quadrado entre os valores reais e previstos. Um valor menor indica previsões mais precisas. Neste caso, o valor obtido (0.3396) mostra que, em média, os desvios entre as previsões e os valores reais são baixos, embora ainda não ideais.
+
+#### **Erro Absoluto Médio (MAE)**
+- **Resultado Obtido:** 0.4401  
+- **Interpretação:**  
+  O MAE mede o erro médio absoluto em termos diretos, sendo mais fácil de interpretar. No contexto do problema, o modelo erra, em média, 0.44 pontos na previsão das notas (`vote_average`), o que é relativamente aceitável dependendo da escala dos valores de saída (normalizados, neste caso).
+
+#### **Coeficiente de Determinação (R²)**
+- **Resultado Obtido:** 0.5178  
+- **Interpretação:**  
+  O R² mede a proporção da variância dos dados que o modelo consegue explicar. Um valor de 0.5178 indica que o modelo explica cerca de 51,78% da variabilidade nos dados de teste. Embora seja um valor razoável, ele sugere que o modelo pode ser melhorado para capturar mais padrões presentes nos dados.
+
 
 
 ## Discussão dos resultados obtidos
 
-Nesta seção, discuta os resultados obtidos pelos modelos construídos, no contexto prático em que os dados se inserem, promovendo uma compreensão abrangente e aprofundada da qualidade de cada um deles. Lembre-se de relacionar os resultados obtidos ao problema identificado, a questão de pesquisa levantada e estabelecendo relação com os objetivos previamente propostos. 
+- Os resultados indicam que o modelo capturou padrões importantes, mas ainda há muito espaço para melhorias. Um MSE e MAE baixos mostram que o modelo consegue fazer previsões minimamente razoáveis na média, enquanto o R² de 0.5178 revela que ainda existem fatores explicativos não capturados pelo modelo atual.  
+- Foram realizados testes com alterações significativas no modelo, como na quantidade de neurônios, na função de ativação(ex: LeakyReLU), na taxa de regularização L2, no otimizador e em sua taxa de aprendizado, nos tamanhos dos lotes, inclusão/remoção do dropout, 
+na métrica de 'loss' e no scaler de padronização dos dados. Considerando todos os testes realizados, as métricas em nenhum momento se apresentaram superiores aos resultados aqui apresentados.
+- Os resultados mostram que a RNA é um modelo promissor para o problema de previsão de `vote_average`, mas ainda é necessário investir em ajustes de parâmetros e melhorias na engenharia de recursos para atingir uma performance mais robusta. Com base nos valores apresentados, o modelo já fornece previsões úteis, mas a explicabilidade e o desempenho podem ser aprimorados em iterações futuras.
 
 # Pipeline de pesquisa e análise de dados
 
