@@ -1,44 +1,92 @@
 # Preparação dos dados
 
-Nesta etapa, deverão ser descritas todas as técnicas utilizadas para pré-processamento/tratamento dos dados.
+Foram realizadas as seguintes etapas de **pré-processamento e tratamento dos dados**, alinhadas às melhores práticas para trabalhar com conjuntos de dados antes de aplicá-los em modelos de aprendizado de máquina. 
 
-Algumas das etapas podem estar relacionadas à:
+## **1. Seleção de Colunas Relevantes**
+- **Técnica:** Filtragem das colunas desejadas.
+- **Colunas Selecionadas:** `original_title`, `budget`, `revenue`, `vote_count`, `popularity`, `vote_average`, `genres`.
+- **Objetivo:** Reduzir o conjunto de dados a apenas as variáveis relevantes para este estudo, descartando informações irrelevantes ou redundantes para o problema.
 
-* Limpeza de Dados: trate valores ausentes: decida como lidar com dados faltantes, seja removendo linhas, preenchendo com médias, medianas ou usando métodos mais avançados; remova _outliers_: identifique e trate valores que se desviam significativamente da maioria dos dados.
+## **2. Limpeza de Dados**
+- **Técnica:** Substituição de valores `0` por `NA` e remoção de linhas com valores ausentes.
+- **Objetivo:**
+  - Garantir que apenas entradas válidas permaneçam no conjunto de dados.
+  - Excluir registros com valores que comprometem a análise, como orçamentos ou receitas iguais a zero.
 
-* Transformação de Dados: normalize/padronize: torne os dados comparáveis, normalizando ou padronizando os valores para uma escala específica; codifique variáveis categóricas: converta variáveis categóricas em uma forma numérica, usando técnicas como _one-hot encoding_.
+## **3. Transformação de Variáveis Categóricas**
 
-* _Feature Engineering_: crie novos atributos que possam ser mais informativos para o modelo; selecione características relevantes e descarte as menos importantes.
+### **a) Separação dos Gêneros**
+- **Técnica:** A coluna `genres` é convertida em listas de gêneros.
 
-* Tratamento de dados desbalanceados: se as classes de interesse forem desbalanceadas, considere técnicas como _oversampling_, _undersampling_ ou o uso de algoritmos que lidam naturalmente com desbalanceamento.
+### **b) One-Hot Encoding**
+- **Técnica:** Criar colunas binárias correspondentes a cada gênero único no dataset.
+- **Exemplo:** Se a coluna `genres` contém `Action Comedy`, serão criadas colunas `Action` e `Comedy` com valores `1` ou `0` para indicar a presença ou ausência desses gêneros.
+- **Objetivo:** Transformar uma variável categórica em uma representação numérica adequada para os modelos de aprendizado de máquina.
 
-* Separação de dados: divida os dados em conjuntos de treinamento, validação e teste para avaliar o desempenho do modelo de maneira adequada.
-  
-* Manuseio de Dados Temporais: se lidar com dados temporais, considere a ordenação adequada e técnicas específicas para esse tipo de dado.
-  
-* Redução de Dimensionalidade: aplique técnicas como PCA (Análise de Componentes Principais) se a dimensionalidade dos dados for muito alta.
+### **c) Remoção de Colunas Intermediárias**
+- **Técnica:** As colunas `genres` e `genres_list`, usadas para criação das variáveis binárias, são descartadas.
+- **Objetivo:** Manter apenas as colunas relevantes e evitar redundância no conjunto de dados.
 
-* Validação Cruzada: utilize validação cruzada para avaliar o desempenho do modelo de forma mais robusta.
-
-* Monitoramento Contínuo: atualize e adapte o pré-processamento conforme necessário ao longo do tempo, especialmente se os dados ou as condições do problema mudarem.
-
-* Entre outras....
-
-Avalie quais etapas são importantes para o contexto dos dados que você está trabalhando, pois a qualidade dos dados e a eficácia do pré-processamento desempenham um papel fundamental no sucesso de modelo(s) de aprendizado de máquina. É importante entender o contexto do problema e ajustar as etapas de preparação de dados de acordo com as necessidades específicas de cada projeto.
+## **4. Escalonamentos**
+- **Técnica:**  Aplicar padronização ou normalização às variáveis numéricas.
+- **Objetivo:** Garantir uniformidade entre as escalas, caso seja necessário para os algoritmos utilizados posteriormente.
 
 # Descrição dos modelos
 
-Nesta seção, conhecendo os dados e de posse dos dados preparados, é hora de descrever os algoritmos de aprendizado de máquina selecionados para a construção dos modelos propostos. Inclua informações abrangentes sobre cada algoritmo implementado, aborde conceitos fundamentais, princípios de funcionamento, vantagens/limitações e justifique a escolha de cada um dos algoritmos. 
+## **Modelo Utilizado 1: Rede Neural Artificial (RNA)**
 
-Explore aspectos específicos, como o ajuste dos parâmetros livres de cada algoritmo. Lembre-se de experimentar parâmetros diferentes e principalmente, de justificar as escolhas realizadas.
+### **Sobre:**
 
-Como parte da comprovação de construção dos modelos, um vídeo de demonstração com todas as etapas de pré-processamento e de execução dos modelos deverá ser entregue. Este vídeo poderá ser do tipo _screencast_ e é imprescindível a narração contemplando a demonstração de todas as etapas realizadas.
+#### **1. Fundamentos e Princípios de Funcionamento**
+Uma RNA é composta por camadas de neurônios interconectados que processam os dados de entrada, aprendendo padrões complexos para fazer previsões. Este modelo é altamente flexível e poderoso, especialmente em problemas de **regressão**, como o caso do nosso problema, onde o objetivo é prever a nota média (`vote_average`) dos filmes com base em diversos atributos.
+
+#### **2. Vantagens**
+- **Capacidade de modelar relações não lineares:** Ideal para conjuntos de dados com padrões complexos.
+- **Ajuste de pesos dinâmico:** Aprendizagem iterativa com base no erro reduzido.
+- **Personalização:** Capacidade de trabalhar os parâmetros mais relevantes do modelo, garantindo flexibilidade na arquitetura (número de camadas, neurônios, funções de ativação, etc.).
+
+#### **3. Limitações**
+- **Poder computacional:** Requer maior quantidade de dados e poder computacional comparado a modelos mais simples, como regressão linear.
+- **Susceptibilidade a overfitting:** Por isso, medidas de regularização e estratégias como `EarlyStopping` e `Dropout` foram incorporadas.
+
+#### **4. Justificativa da Escolha**
+A RNA foi escolhida devido à complexidade do problema, que envolve dados contínuos, como orçamento e receita, além de binários (gêneros do filme). Este modelo pode capturar relações sutis e não lineares, essenciais para aumentar a precisão nas previsões.
+
+### **Arquitetura do Modelo:**
+
+1. **Pré-processamento dos Dados**
+   - Foi utilizado o **RobustScaler**, que é robusto a outliers, para escalonar os dados de entrada (`X`) e a variável alvo (`y`).
+
+2. **Camadas do Modelo**
+   - **Entrada:** Primeira camada densa com 32 neurônios e função de ativação **ReLU**, que é eficaz em redes profundas e evita problemas de saturação de gradientes.
+   - **Camadas Ocultas:** Duas camadas densas com 64 neurônios cada, também com ReLU.
+   - **Regularização L2:** Penaliza pesos muito altos para evitar overfitting.
+   - **Camada de Saída:** Um único neurônio sem função de ativação, apropriado para regressão.
+
+3. **Regularização**
+   - **Dropout:** Evita o sobreajuste ao desativar aleatoriamente neurônios durante o treinamento.
+   - **EarlyStopping:** Monitora a perda no conjunto de validação e interrompe o treinamento ao detectar estagnação.
+
+4. **Otimizador**
+   - **Adam:** Escolhido por sua eficiência e capacidade de ajustar dinamicamente as taxas de aprendizado.
+
+5. **Função de Perda**
+   - **Erro Quadrático Médio (MSE):** Penaliza desvios maiores, sendo apropriado para regressão contínua.
+
 
 # Avaliação dos modelos criados
 
-## Métricas utilizadas
+## **1.Avaliação do Modelo RNA**
 
-Nesta seção, as métricas utilizadas para avaliar os modelos desenvolvidos deverão ser apresentadas (p. ex.: acurácia, precisão, recall, F1-Score, MSE etc.). A escolha de cada métrica deverá ser justificada, pois esta escolha é essencial para avaliar de forma mais assertiva a qualidade do modelo construído. 
+### **Métricas Utilizadas**
+
+- **Erro Quadrático Médio (MSE):**
+  - Justificativa: Mede o desvio médio ao quadrado entre os valores reais e previstos, destacando erros maiores.
+- **Erro Absoluto Médio (MAE):**
+  - Justificativa: Fornece uma medida mais interpretável, representando o erro médio em termos absolutos.
+- **Coeficiente de Determinação (R²):**
+  - Justificativa: Avalia a proporção da variância explicada pelo modelo, sendo uma métrica padrão para regressão.
+
 
 ## Discussão dos resultados obtidos
 
