@@ -4,7 +4,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
 # Carregar os dados
-dados = pd.read_csv('regressaolinearmovie_dataset.csv')
+dados = pd.read_csv('src/regressaolinear-movie_dataset.csv')
 
 # Selecionar as variáveis independentes e a dependente
 X = dados[['budget', 'revenue', 'vote_count', 'popularity', 'Action', 'Adventure', 'Fantasy', 'Drama']]  # Adicione as variáveis relevantes
