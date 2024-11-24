@@ -74,6 +74,25 @@ A RNA foi escolhida devido à complexidade do problema, que envolve dados contí
    - **Erro Quadrático Médio (MSE):** Penaliza desvios maiores, sendo apropriado para regressão contínua.
 
 
+## **Modelo Utilizado 2: Regressão Linear Multivariada**
+
+### **Sobre:**
+
+#### **1. Fundamentos e Princípios de Funcionamento**
+A Regressão Linear Multivariada é um modelo estatístico que estabelece uma relação linear entre uma variável dependente (neste caso, vote_average) e uma ou mais variáveis independentes (budget, popularity, revenue, vote_count, e os gêneros de filmes representados como variáveis binárias).
+O modelo assume que a variável dependente pode ser descrita como uma combinação linear ponderada das variáveis independentes mais um termo de erro.
+
+#### **2. Vantagens**
+- **Simplicidade e Interpretabilidade:** As relações entre as variáveis são representadas de maneira simples e clara, permitindo fácil interpretação dos coeficientes.
+- **Baixo Custo Computacional:** Comparado a modelos mais complexos, como redes neurais, a regressão linear é eficiente em termos de processamento e memória.
+- **Robustez para Relações Lineares:** Ideal para identificar e modelar padrões lineares entre variáveis.
+- **Generalização:** Quando bem ajustado, o modelo generaliza bem para novos dados.
+
+#### **3. Limitações**
+- **Incapacidade de Modelar Relações Não Lineares:** O modelo pressupõe uma relação linear entre as variáveis, podendo falhar em capturar padrões mais complexos.
+- **Sensibilidade a Outliers:** Valores extremos podem distorcer os coeficientes estimados.
+- **Multicolinearidade:** Relações fortes entre variáveis independentes podem impactar a precisão dos coeficientes e dificultar a interpretação.
+
 # Avaliação dos modelos criados
 
 ## **1. Modelo RNA**
