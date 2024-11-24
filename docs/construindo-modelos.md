@@ -104,9 +104,48 @@ A RNA foi escolhida devido à complexidade do problema, que envolve dados contí
 na métrica de 'loss' e no scaler de padronização dos dados. Considerando todos os testes realizados, as métricas em nenhum momento se apresentaram superiores aos resultados aqui apresentados.
 - Os resultados mostram que a RNA é um modelo promissor para o problema de previsão de `vote_average`, mas ainda é necessário investir em ajustes de parâmetros e melhorias na engenharia de recursos para atingir uma performance mais robusta. Com base nos valores apresentados, o modelo já fornece previsões úteis, mas a explicabilidade e o desempenho podem ser aprimorados em iterações futuras.
 
-# Pipeline de pesquisa e análise de dados
 
-Em pesquisa e experimentação em sistemas de informação, um pipeline de pesquisa e análise de dados refere-se a um conjunto organizado de processos e etapas que um profissional segue para realizar a coleta, preparação, análise e interpretação de dados durante a fase de pesquisa e desenvolvimento de modelos. Esse pipeline é essencial para extrair _insights_ significativos, entender a natureza dos dados e, construir modelos de aprendizado de máquina eficazes. 
+# Pipeline de Pesquisa e Análise de Dados
+
+1. **Definição do Problema:**
+   - Identificar o objetivo principal do estudo ou aplicação.
+   - Definir as questões de pesquisa e as metas desejadas.
+
+2. **Levantamento e Análise da Bibliografia:**
+   - Revisar a literatura existente sobre o tema para identificar abordagens e lacunas.
+   - Coletar referências sobre métodos, algoritmos e métricas utilizadas.
+
+3. **Coleta dos Dados:**
+   - Obter dados de fontes confiáveis, como bases de dados públicas, APIs, sensores, ou arquivos internos.
+   - Garantir que a coleta seja realizada de forma ética e em conformidade com a legislação.
+
+4. **Análises Exploratórias Preliminares:**
+   - Realizar inspeções iniciais nos dados disponíveis.
+   - Identificar possíveis padrões ou limitações antes de avançar.
+
+5. **Preparação dos Dados:**
+   - **Limpeza:** Tratamento de valores ausentes, inconsistências e remoção de outliers.
+   - **Transformação:** Normalização, padronização, codificação de variáveis categóricas e criação de novas variáveis.
+
+7. **Arquitetura da Solução:**
+   - Desenho da estrutura geral da solução, com detalhamento dos conceitos e das ferramentas que serão utilizadas.
+   - Planejamento dos modelos e técnicas a serem explorados, com justificativa.
+
+8. **Desenvolvimento de Modelos:**
+   - Seleção de algoritmos de aprendizado de máquina adequados ao problema.
+   - Treinamento e validação.
+   - Otimização de hiperparâmetros para melhorar o desempenho do modelo.
+   - Teste de diferentes arquiteturas para comparar resultados.
+
+9. **Interpretação e Comunicação:**
+   - Geração de relatórios e visualizações para comunicar os resultados.
+   - Interpretação prática dos resultados no contexto do problema.
+   - Preparação para apresentação de insights ao público-alvo.
+
+## Observações: 
+
+- **Automação:** Sempre que possível, deve-se considerar a automação de processos que se repetem nas diversão iterações pela pipeline.
+- **Flexibilidade:** O processo deve ser flexível e ajustável, permitindo revisões contínuas durante o projeto, incluindo até mesmo o regresso a etapas anteriores, quando necessário.
 
 ## Observações importantes
 
