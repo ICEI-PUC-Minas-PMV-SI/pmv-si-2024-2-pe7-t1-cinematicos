@@ -164,14 +164,66 @@ Os coeficientes representam o impacto de cada variável na previsão da nota mé
 
 **Nota**: Os valores dos coeficientes representam a magnitude e a direção do impacto de cada variável no modelo de regressão linear. Coeficientes positivos indicam que um aumento na variável aumenta a média de avaliação, enquanto valores negativos indicam o contrário.
 
+**Por Que Apenas 4 Gêneros Foram Utilizados?**
+Após a análise do processamento do dataset, constatou-se que os gêneros Action, Adventure, Fantasy, e Drama foram mantidos por representarem uma parte significativa dos dados e serem frequentes no conjunto original.
+Esses gêneros provavelmente foram selecionados manualmente ou com base em sua alta frequência no dataset para simplificar a análise e reduzir a complexidade do modelo. Gêneros menos frequentes ou de baixa representatividade foram descartados, o que é comum em problemas de regressão onde a inclusão de variáveis irrelevantes pode introduzir ruído e comprometer a precisão do modelo.
 
-## Discussão dos resultados obtidos
+## Discussão dos resultados obtidos - MODELO RNA
 
 - Os resultados indicam que o modelo capturou padrões importantes, mas ainda há muito espaço para melhorias. Um MSE e MAE baixos mostram que o modelo consegue fazer previsões minimamente razoáveis na média, enquanto o R² de 0.5178 revela que ainda existem fatores explicativos não capturados pelo modelo atual.  
 - Foram realizados testes com alterações significativas no modelo, como na quantidade de neurônios, na função de ativação(ex: LeakyReLU), na taxa de regularização L2, no otimizador e em sua taxa de aprendizado, nos tamanhos dos lotes, inclusão/remoção do dropout, 
 na métrica de 'loss' e no scaler de padronização dos dados. Considerando todos os testes realizados, as métricas em nenhum momento se apresentaram superiores aos resultados aqui apresentados.
 - Os resultados mostram que a RNA é um modelo promissor para o problema de previsão de `vote_average`, mas ainda é necessário investir em ajustes de parâmetros e melhorias na engenharia de recursos para atingir uma performance mais robusta. Com base nos valores apresentados, o modelo já fornece previsões úteis, mas a explicabilidade e o desempenho podem ser aprimorados em iterações futuras.
 
+## Discussão dos resultados obtidos - MODELO REGRESSÃO LINEAR
+Os resultados obtidos com o modelo de regressão linear multivariada mostram que ele possui várias limitações em capturar a variabilidade nas notas médias dos filmes. Isso é evidenciado pelo baixo coeficiente de determinação 
+𝑅²(0.26), que indica que apenas 26% da variação nas notas (vote_average) é explicada pelas variáveis preditoras incluídas no modelo.
+O erro quadrático médio (MSE) de 0.59 sugere que há desvios razoáveis nas previsões, o que indica que o modelo ainda não está otimizado. Portanto, há espaço significativo para melhorias. Além disso, o erro absoluto médio (MAE) de 0.60 implica que o modelo erra, em média, 0.60 pontos na previsão das médias das avaliações dos filmes, o que é moderadamente aceitável, mas demonstra a necessidade de ajustes.
+Além disso, a simplificação dos gêneros a apenas quatro (Action, Adventure, Fantasy e Drama) pode ter limitado a capacidade do modelo de capturar padrões mais complexos no dataset. Pode-se explorar métodos para incluir mais variáveis relevantes, como duração do filme, país de origem, ou outros gêneros, que podem potencialmente aumentar a capacidade do modelo em explicar a variabilidade nas notas dos filmes.
+A análise dos coeficientes dos gêneros mostra que "Drama" tem o maior impacto positivo (0.4878), enquanto "Action" possui um impacto negativo significativo (-0.6509) na média das avaliações dos filmes, indicando que tais relações são importantes para a predição da variável dependente.
+Para melhorias, podemos considerar:
+- Incluir mais variáveis relevantes: Adicionar atributos adicionais pode melhorar a explicabilidade do modelo.
+- Explorar interações entre variáveis: Analisar como interações entre variáveis independentes podem influenciar as previsões.
+- Testar modelos mais complexos: Explorar modelos mais sofisticados como árvores de decisão ou redes neurais.
+
+## Comparação entre os Modelos: Rede Neural Artificial (RNA) vs. Regressão Linear Multivariada
+### Eficiência e Resultados
+**Rede Neural Artificial (RNA)**
+MSE: 0.3396
+MAE: 0.4401
+R²: 0.5178
+
+**Regressão Linear Multivariada**
+MSE: 0.59
+MAE: 0.60
+R²: 0.26
+
+## Comparação e Discussão
+Os valores das métricas de desempenho evidenciam que o modelo de RNA supera a Regressão Linear Multivariada em termos de precisão e capacidade explicativa. A RNA apresenta um MSE e MAE mais baixos, sugerindo que as previsões feitas pelo modelo de RNA são mais próximas dos valores reais. Além disso, o 
+𝑅² da RNA é significativamente maior (0.5178) do que o da regressão linear (0.26), indicando que a RNA é mais eficaz em explicar a variabilidade das notas médias dos filmes.
+
+### Vantagens e Limitações
+**Vantagens da Rede Neural Artificial (RNA):**
+- Capacidade de modelar relações não lineares: Ideal para conjuntos de dados com padrões complexos, que não podem ser capturados por modelos lineares.
+- Flexibilidade na arquitetura: A RNA permite ajustar vários hiperparâmetros como número de camadas, neurônios por camada, funções de ativação, etc.
+- Melhor desempenho preditivo: Métricas indicam uma capacidade superior de previsão.
+
+**Limitações da Rede Neural Artificial (RNA):**
+- Requer maior poder computacional: O treinamento de RNAs pode ser lento e demanda mais recursos.
+- Configuração mais complexa: O ajuste de hiperparâmetros para evitar overfitting pode ser desafiador.
+
+**Vantagens da Regressão Linear Multivariada:**
+- Simplicidade e interpretabilidade: Relações entre variáveis são claras e os resultados são facilmente compreendidos.
+- Baixo custo computacional: Rápida implementação e menos onerosa em termos de processamento.
+- Generalização em relações lineares: Funciona bem para identificar padrões lineares, que podem ser robustos.
+
+**Limitações da Regressão Linear Multivariada:**
+- Incapacidade de capturar não linearidade: O modelo não é eficaz em identificar padrões não lineares presentes nos dados.
+- Sensibilidade a outliers e multicolinearidade: Valores extremos e relações fortes entre variáveis independentes podem distorcer os resultados.
+
+## Conclusão sobre as discussões acerca dos modelos utilizados
+Ambos os modelos têm seus méritos e limitações, mas a análise das métricas de desempenho sugere que a Rede Neural Artificial (RNA) é mais eficiente para o problema em questão, oferecendo previsões mais precisas e uma melhor capacidade explicativa em relação à Regressão Linear Multivariada. Portanto, a RNA se sobressai e pode ser considerada a melhor escolha para previsão das notas médias dos filmes, especialmente devido à sua habilidade em modelar relações complexas e não lineares nos dados.
+Recomenda-se investir mais em ajustes de parâmetros e melhorias na engenharia de recursos para maximizar o potencial da RNA, enquanto a Regressão Linear Multivariada poderia servir como um modelo de linha de base ou em casos onde interpretabilidade e simplicidade são mais valorizadas.
 
 # Pipeline de Pesquisa e Análise de Dados
 
