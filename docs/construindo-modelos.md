@@ -229,7 +229,7 @@ Recomenda-se investir mais em ajustes de parâmetros e melhorias na engenharia d
 
 1. **Definição do Problema:**
    - Identificar o objetivo principal do estudo ou aplicação.
-   - Definir as questões de pesquisa e as metas desejadas.
+   - Definir claramente as questões de pesquisa e as metas desejadas, incluindo as métricas de sucesso para avaliação dos modelos.
 
 2. **Levantamento e Análise da Bibliografia:**
    - Revisar a literatura existente sobre o tema para identificar abordagens e lacunas.
@@ -237,11 +237,12 @@ Recomenda-se investir mais em ajustes de parâmetros e melhorias na engenharia d
 
 3. **Coleta dos Dados:**
    - Obter dados de fontes confiáveis, como bases de dados públicas, APIs, sensores, ou arquivos internos.
-   - Garantir que a coleta seja realizada de forma ética e em conformidade com a legislação.
+   - Garantir que a coleta seja realizada de forma ética e em conformidade com a legislação, incluindo preocupações de privacidade de dados e conformidade com regulamentações como GDPR.
 
 4. **Análises Exploratórias Preliminares:**
-   - Realizar inspeções iniciais nos dados disponíveis.
+   - Realizar inspeções iniciais nos dados disponíveis, incluindo visualização de dados e estatísticas descritivas. 
    - Identificar possíveis padrões ou limitações antes de avançar.
+   - Considerar a segmentação de dados para identificar subgrupos dentro dos dados.
 
 5. **Preparação dos Dados:**
    - **Limpeza:** Tratamento de valores ausentes, inconsistências e remoção de outliers.
