@@ -130,6 +130,39 @@ A regressão linear multivariada foi escolhida devido à sua capacidade comprova
 - **Interpretação:**  
   O R² mede a proporção da variância dos dados que o modelo consegue explicar. Um valor de 0.5178 indica que o modelo explica cerca de 51,78% da variabilidade nos dados de teste. Embora seja um valor razoável, ele sugere que o modelo pode ser melhorado para capturar mais padrões presentes nos dados.
 
+## **2. Modelo Regressão Linear Multivariada**
+
+### **Métricas Utilizadas**
+
+#### **Erro Quadrático Médio (MSE)**
+- **Resultado Obtido:** 0.59  
+- **Interpretação:**  O MSE mede o desvio médio ao quadrado entre os valores reais e os previstos. Valores menores indicam maior precisão do modelo. O MSE de 0.59 mostra que há desvios razoáveis nas previsões, sugerindo que o modelo ainda não está otimizado. Embora não seja um valor extremamente alto, ainda há espaço significativo para melhorias.
+  
+#### **Erro Absoluto Médio (MAE)**
+- **Resultado Obtido:** 0.60
+- **Interpretação:**  Interpretação: O MAE representa o erro médio absoluto entre os valores reais e previstos, sendo mais interpretável por expressar desvios em valores absolutos. Com um MAE de 0.60, o modelo apresenta erros médios moderados em relação às avaliações reais dos filmes. É um desempenho que indica certa precisão, mas também reforça a necessidade de ajustes ou inclusão de mais variáveis preditoras.
+
+#### **Coeficiente de Determinação (R²)**
+- **Resultado Obtido:** 0.26
+- **Interpretação:**   O R² mede a proporção da variância nos valores de saída que o modelo é capaz de explicar. Um valor de 0.26 indica que apenas 26% da variação nas notas dos filmes (vote_average) é explicada pelas variáveis preditoras incluídas no modelo. Isso sugere que o modelo atual captura apenas uma fração limitada da relação entre as variáveis independentes e dependentes, sendo necessário explorar outras variáveis ou modelos mais complexos.
+
+### **Análise dos Coeficientes das Variáveis**
+Os coeficientes representam o impacto de cada variável na previsão da nota média dos filmes (vote_average).
+
+# Tabela de Coeficientes das Variáveis
+
+| Variável    | Coeficiente         | Interpretação                                                                 |
+|-------------|---------------------|-------------------------------------------------------------------------------|
+| **budget**  | -6.263725e-09       | O orçamento tem um impacto muito pequeno e negativo na média de avaliação dos filmes. |
+| **revenue** | 5.041638e-11        | A receita também possui um impacto mínimo e positivo na média de avaliação.  |
+| **vote_count** | 3.287690e-04    | A contagem de votos tem uma contribuição pequena, mas positiva, para a média de avaliação. |
+| **popularity** | 3.552134e-04    | A popularidade contribui positivamente para a média de avaliação, mas com um peso pequeno. |
+| **Action**  | -6.509819e-01       | O gênero "Action" tem um impacto negativo significativo na média de avaliação dos filmes. |
+| **Adventure** | 3.430807e-01     | O gênero "Adventure" tem um impacto positivo moderado na média de avaliação dos filmes. |
+| **Fantasy** | 2.617018e-01        | O gênero "Fantasy" também contribui positivamente, mas com um peso menor que "Adventure". |
+| **Drama**   | 4.877559e-01        | O gênero "Drama" possui o maior impacto positivo na média de avaliação entre os gêneros analisados. |
+
+**Nota**: Os valores dos coeficientes representam a magnitude e a direção do impacto de cada variável no modelo de regressão linear. Coeficientes positivos indicam que um aumento na variável aumenta a média de avaliação, enquanto valores negativos indicam o contrário.
 
 
 ## Discussão dos resultados obtidos
