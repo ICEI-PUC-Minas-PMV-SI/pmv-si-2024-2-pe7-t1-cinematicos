@@ -273,3 +273,12 @@ Recomenda-se investir mais em ajustes de parâmetros e melhorias na engenharia d
 Todas as tarefas realizadas nesta etapa deverão ser registradas em formato de texto junto com suas explicações de forma a apresentar  os códigos desenvolvidos e também, o código deverá ser incluído, na íntegra, na pasta "src".
 
 Além disso, deverá ser entregue um vídeo onde deverão ser descritas todas as etapas realizadas. O vídeo, que não tem limite de tempo, deverá ser apresentado por **todos os integrantes da equipe**, de forma que, cada integrante tenha oportunidade de apresentar o que desenvolveu e as  percepções obtidas.
+
+Vídeo Regressão Linear Parte 1:
+https://github.com/user-attachments/assets/036e5fb6-1978-4229-8fa3-52663f05706c
+
+Vídeo Regressão Linear Parte 2:
+https://github.com/user-attachments/assets/13a0c576-69d6-4b6f-8b2f-1087b0d0e123
+
+
+
