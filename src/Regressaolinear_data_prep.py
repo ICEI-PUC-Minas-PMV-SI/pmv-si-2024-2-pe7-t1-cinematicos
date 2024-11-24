@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import os
 
 # Carregar o dataset
 df = pd.read_csv('src/movie_dataset.csv', encoding='utf-8')
@@ -30,7 +31,9 @@ df_preparado = df_limpo.drop(columns=['genres', 'genres_list'])
 # Visualizar os primeiros dados
 print(df_preparado.head())
 
-# Salvar o dataset preparado como um novo arquivo CSV com o nome solicitado
-novo_caminho_csv = 'regressaolinear_movie_dataset.csv'
+# Criar o caminho para salvar o dataset na pasta 'src'
+novo_caminho_csv = os.path.join('src', 'regressaolinear-movie_dataset.csv')
+
+# Salvar o dataset preparado como um novo arquivo CSV
 df_preparado.to_csv(novo_caminho_csv, index=False)
 print(f"Novo arquivo salvo em: {novo_caminho_csv}")
