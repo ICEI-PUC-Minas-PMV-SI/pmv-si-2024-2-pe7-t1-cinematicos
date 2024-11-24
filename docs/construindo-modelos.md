@@ -79,20 +79,36 @@ A RNA foi escolhida devido à complexidade do problema, que envolve dados contí
 ### **Sobre:**
 
 #### **1. Fundamentos e Princípios de Funcionamento**
-A Regressão Linear Multivariada é um modelo estatístico que estabelece uma relação linear entre uma variável dependente (neste caso, vote_average) e uma ou mais variáveis independentes (budget, popularity, revenue, vote_count, e os gêneros de filmes representados como variáveis binárias).
-O modelo assume que a variável dependente pode ser descrita como uma combinação linear ponderada das variáveis independentes mais um termo de erro.
+A Regressão Linear Multivariada é um modelo estatístico que estabelece uma relação linear entre uma variável dependente (neste caso, vote_average) e uma ou mais variáveis independentes (como budget, popularity, revenue, vote_count e os gêneros de filmes representados como variáveis binárias através do one-hot encoding). O modelo assume que a variável dependente pode ser descrita como uma combinação linear ponderada das variáveis independentes mais um termo de erro.
 
 #### **2. Vantagens**
-- **Simplicidade e Interpretabilidade:** As relações entre as variáveis são representadas de maneira simples e clara, permitindo fácil interpretação dos coeficientes.
-- **Baixo Custo Computacional:** Comparado a modelos mais complexos, como redes neurais, a regressão linear é eficiente em termos de processamento e memória.
-- **Robustez para Relações Lineares:** Ideal para identificar e modelar padrões lineares entre variáveis.
-- **Generalização:** Quando bem ajustado, o modelo generaliza bem para novos dados.
+- **Simplicidade e Interpretabilidade:** As relações entre as variáveis são representadas de maneira simples e clara, permitindo fácil interpretação dos coeficientes. Cada coeficiente indica a variação na variável dependente associada a uma variação unitária na variável independente correspondente, mantendo constantes todas as outras variáveis.
+- **Baixo Custo Computacional:** Comparado a modelos mais complexos, como redes neurais, a regressão linear é eficiente em termos de processamento e memória. Isso facilita o treinamento do modelo mesmo com hardware limitado e permite uma rápida implementação.
+- **Robustez para Relações Lineares:**  Ideal para identificar e modelar padrões lineares entre variáveis, sendo importante quando a relação entre as variáveis é verdadeiramente linear.
+- **Generalização:** Quando está bem ajustado, o modelo de regressão linear multivariada tende a generalizar bem para novos dados, o que é crucial para sua aplicação prática em previsão e tomada de decisão.
 
 #### **3. Limitações**
 - **Incapacidade de Modelar Relações Não Lineares:** O modelo pressupõe uma relação linear entre as variáveis, podendo falhar em capturar padrões mais complexos.
-- **Sensibilidade a Outliers:** Valores extremos podem distorcer os coeficientes estimados.
+- **Sensibilidade a Outliers:** Valores extremos podem distorcer os coeficientes estimados,levando a previsões imprecisas. Isso requer uma cuidadosa avaliação e, possivelmente, o tratamento de outliers antes de ajustar o modelo.
 - **Multicolinearidade:** Relações fortes entre variáveis independentes podem impactar a precisão dos coeficientes e dificultar a interpretação.
 
+#### **4. Justificativa da Escolha**
+A regressão linear multivariada foi escolhida devido à sua capacidade comprovada de capturar padrões lineares entre variáveis numéricas e categóricas (após o one-hot encoding dos gêneros). Dada a natureza dos dados, que incluem tanto variáveis contínuas quanto categóricas, este modelo é apropriado para problemas de regressão contínua. É uma escolha natural para explorar e quantificar como as características dos filmes influenciam suas avaliações médias (vote_average).
+
+#### **5. Arquitetura do Modelo**
+
+1. **Pré-processamento dos Dados**
+- Tratamento de Dados Faltantes e Outliers: remoção de registros com valores ausentes e substituição ou tratamento de valores extremos que poderiam distorcer os resultados do modelo.
+- Normalização: As variáveis contínuas (budget, revenue, popularity, etc.) são escaladas para um intervalo uniforme para evitar que magnitudes diferentes impactem o modelo.
+
+2. **Variáveis Selecionadas**
+- Independentes: budget, popularity, revenue, vote_count, e indicadores binários de gêneros (Action, Drama, Comedy, etc.).
+- Dependente: vote_average.
+
+3. **Divisão dos Dados** 
+- Treinamento e Teste: o conjunto de dados foi dividido em dois subconjuntos: um para treinamento (80% dos dados) e outro para teste (20% dos dados). Esta divisão permite avaliar a capacidade preditiva do modelo em dados não vistos durante o treinamento.
+- Validação Cruzada: adicionalmente, pode-se utilizar técnicas de validação cruzada para assegurar que o modelo não está superajustado aos dados de treinamento e que generaliza bem para novos dados.
+  
 # Avaliação dos modelos criados
 
 ## **1. Modelo RNA**
