@@ -274,6 +274,9 @@ Todas as tarefas realizadas nesta etapa deverão ser registradas em formato de t
 
 Além disso, deverá ser entregue um vídeo onde deverão ser descritas todas as etapas realizadas. O vídeo, que não tem limite de tempo, deverá ser apresentado por **todos os integrantes da equipe**, de forma que, cada integrante tenha oportunidade de apresentar o que desenvolveu e as  percepções obtidas.
 
+Vídeo Redes Neurais: 
+https://github.com/user-attachments/assets/36b867e8-d5ac-4757-b70d-a6518c8799e2
+
 Vídeo Regressão Linear Parte 1:
 https://github.com/user-attachments/assets/036e5fb6-1978-4229-8fa3-52663f05706c
 
