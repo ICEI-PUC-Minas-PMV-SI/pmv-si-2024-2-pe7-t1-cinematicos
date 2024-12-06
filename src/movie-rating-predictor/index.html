@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Rating Predictor</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Movie Rating Predictor</h1>
+        <form id="movieForm">
+            <div class="form-group">
+                <label for="budget">Budget:</label>
+                <input type="number" id="budget" name="budget" required>
+            </div>
+            <div class="form-group">
+                <label for="popularity">Popularity:</label>
+                <input type="number" id="popularity" name="popularity" required>
+            </div>
+            <div class="form-group">
+                <label for="revenue">Revenue:</label>
+                <input type="number" id="revenue" name="revenue" required>
+            </div>
+            <div class="form-group">
+                <label for="runtime">Runtime:</label>
+                <input type="number" id="runtime" name="runtime" required>
+            </div>
+            <div class="form-group">
+                <label for="genres">Genres (comma separated):</label>
+                <input type="text" id="genres" name="genres" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="predictionResults" class="results">
+            <!-- Os resultados da previsão aparecerão aqui -->
+        </div>
+    </div>
+    
+    <!-- Adicionar o arquivo JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
