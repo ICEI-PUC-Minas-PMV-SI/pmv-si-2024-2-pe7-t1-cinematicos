@@ -9,14 +9,14 @@ document.getElementById("movieForm").addEventListener("submit", function(event) 
         genres: document.getElementById("genres").value.split(",").map(str => str.trim())
     };
 
-    // Exibir os dados no console (substitua pela chamada à API quando o back-end estiver implementado)
+    // Substituir pela chamada à API quando o back-end estiver implementado
     console.log(data);
 
     // Limpeza da área de resultados
     const resultsDiv = document.getElementById("predictionResults");
     resultsDiv.innerHTML = "<p>Carregando...</p>";
 
-    // Enviar os dados para a API através de uma requisição POST (substitua o URL quando o back-end estiver pronto)
+    // Enviar os dados para a API através de uma requisição POST (substituir o URL quando o back-end estiver pronto)
     fetch("http://localhost:5000/predict", {
         method: "POST",
         headers: {
