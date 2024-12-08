@@ -22,10 +22,10 @@ document.getElementById("movieForm").addEventListener("submit", function(event) 
 
     // Coleta os valores das outras colunas do formulário
     const data = {
-        budget: parseFloat(document.getElementById("budget").value), // Obtém o valor do campo 'budget'
-        popularity: parseFloat(document.getElementById("popularity").value), // Obtém o valor do campo 'popularity'
-        revenue: parseFloat(document.getElementById("revenue").value), // Obtém o valor do campo 'revenue'
-        runtime: parseFloat(document.getElementById("runtime").value), // Obtém o valor do campo 'runtime'
+        budget: parseFloat(document.getElementById("budget").value),
+        popularity: parseFloat(document.getElementById("popularity").value),
+        revenue: parseFloat(document.getElementById("revenue").value),
+        vote_count: parseFloat(document.getElementById("vote_count").value),  // Coleta o valor de vote_count
         ...genres // Adiciona os gêneros ao objeto final
     };
 
