@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+from fastapi.middleware.cors import CORSMiddleware
 from tensorflow.keras.models import load_model
 import numpy as np
 import joblib
@@ -35,6 +36,15 @@ class Entrada(BaseModel):
     Foreign: int
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"], 
+    allow_credentials=True,
+    allow_methods=["*"],  
+    allow_headers=["*"],  
+)
+
 
 @app.post("/prever")
 async def prever(entrada: Entrada):
