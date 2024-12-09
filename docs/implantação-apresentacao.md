@@ -60,14 +60,12 @@ Após clicar em "Gerar Predição", os dados são enviados para a API via POST, 
 
 Valor da Predição: 7.5
 
-
-
----
-Nesta seção, a implantação da solução proposta em nuvem deverá ser realizada e detalhadamente descrita. Além disso, deverá ser descrito também, o planejamento da capacidade operacional através da modelagem matemática e da simulação do sistema computacional.
-
-Após a implantação, realize testes que mostrem o correto funcionamento da aplicação.
-
 # Apresentação da solução
 
-Nesta seção, um vídeo de, no máximo, 5 minutos onde deverá ser descrito o escopo todo do projeto, um resumo do trabalho desenvolvido, incluindo a comprovação de que a implantação foi realizada e, as conclusões alcançadas.
+#### Vídeo da Parte 1 - API Back End
+https://github.com/user-attachments/assets/04466283-77de-4b70-b62c-6c45b9a74bd3
+
+#### Vídeo da Parte 2 - Front-end
+https://github.com/user-attachments/assets/822437aa-3d0f-47f7-baf8-d6bc135f7bae
+
 
