@@ -25,6 +25,43 @@ Foi realizada uma simulação de carga com a biblioteca Python Locust para verif
 #### Testes de Robustez
 Também foram realizados testes de robustez para verificar o comportamento do sistema em condições de falha, como dados de entrada inválidos ou problemas de rede. O sistema foi configurado para retornar mensagens de erro apropriadas quando as entradas não estivessem de acordo com o formato esperado.
 
+
+## Front-End
+O front-end foi desenvolvido para criar uma interface simples que permita ao usuário fornecer dados de entrada e visualizar os resultados de previsão fornecidos pela API. A interface foi projetada com HTML, CSS e JavaScript puro, com foco na simplicidade e responsividade.
+
+#### Funcionalidades
+
+* Entrada de Dados: 
+Campos para fornecer informações como orçamento, popularidade, receita, número de votos e gêneros de filmes.
+Suporte para seleção múltipla no campo de gêneros.
+
+* Integração com a API: O front-end consome a API via requisição HTTP POST. Os dados fornecidos são enviados em formato JSON e o resultado da previsão é exibido na tela.
+
+* Exibição de Resultados: A interface exibe o valor de predição retornado pela API diretamente abaixo do formulário.
+
+#### Estrutura:
+* HTML: Define a estrutura da interface.
+* CSS: Proporciona um design limpo e responsivo, com cores suaves e layout ajustável.
+* JavaScript: Gerencia a lógica da aplicação, como captura de eventos, envio de dados e exibição de resultados.
+
+#### Requisição POST:
+
+URL da API: http://40.78.23.140:8000/prever
+
+O usuário preenche os campos disponíveis no formulário:
+
+* Orçamento: 237000000
+* Receita: 9691000000
+* Popularidade: 250.082653
+* Contagem de Votos: 9466
+* Gêneros: Action, Adventure e Comedy.
+  
+Após clicar em "Gerar Predição", os dados são enviados para a API via POST, exibindo os valores da predição:
+
+Valor da Predição: 7.5
+
+
+
 ---
 Nesta seção, a implantação da solução proposta em nuvem deverá ser realizada e detalhadamente descrita. Além disso, deverá ser descrito também, o planejamento da capacidade operacional através da modelagem matemática e da simulação do sistema computacional.
 
