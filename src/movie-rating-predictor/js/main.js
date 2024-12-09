@@ -52,8 +52,8 @@ document.getElementById("movieForm").addEventListener("submit", function(event) 
     .then(data => {
         // Exibe os resultados retornados pela API
         resultsDiv.innerHTML = `
-            <h3>Prediction:</h3>
-            <p>Prediction Value: ${data.predicao}</p>
+            <h3>Predição:</h3>
+            <p>Valor de Predição: ${data.predicao}</p>
         `;
     })
     .catch(error => {
