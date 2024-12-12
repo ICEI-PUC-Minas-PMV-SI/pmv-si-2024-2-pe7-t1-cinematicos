@@ -29,6 +29,9 @@ Também foram realizados testes de robustez para verificar o comportamento do si
 ## Front-End
 O front-end foi desenvolvido para criar uma interface simples que permita ao usuário fornecer dados de entrada e visualizar os resultados de previsão fornecidos pela API. A interface foi projetada com HTML, CSS e JavaScript puro, com foco na simplicidade e responsividade.
 
+Link do deploy do front-end:
+https://cinematicos-452aa.web.app/
+
 #### Funcionalidades
 
 * Entrada de Dados: 
